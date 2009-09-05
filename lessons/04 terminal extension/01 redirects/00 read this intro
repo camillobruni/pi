@@ -1,0 +1,42 @@
+If you want to store an output of a command in a file you can use the simple
+redirect ">":
+
+>> grep 2008 grep.txt > out.txt
+
+The greater than sign ">" works somewhat similar to piping "|". It just wrks
+only with files as output.
+
+There exists another operator, the double greater than ">>" appends to the
+given output file:
+
+>> echo 1 >> out.txt
+>> echo 2 >> out.txt
+>> cat out.txt
+
+The output file "out.txt" will now contain two lines:
+
+>> wc -l out.txt
+    2 out.txt
+
+Whereas, if I would have used only the single greater than ">" the file would
+be overwritten each time and not appended:
+
+>> echo 1 > out.txt
+>> echo 2 > out.txt
+>> cat out.txt
+2
+
+Another trick to make a command run silently is to /dev/null:
+
+>> cat grep.txt > /dev/null
+
+/dev/null is a special file/device that discards all data given to it.
+
+
+
+
+There exist other operators:
+
+    ">"     redirect to a file
+    ">>"    redirect to a file by appending
+    "2>"    redirect the warnings to a file

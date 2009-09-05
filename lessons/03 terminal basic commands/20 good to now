@@ -1,0 +1,15 @@
+The list of useful unix commands is infinite ;) but here are a few commands
+which can be very useful:
+
+clear   clear the display
+head    display first lines of a file
+kill    kill all running processes with a given name
+passwd  change your accounts password
+ping    see if a host is online and responds
+tail    display the last part of a file, mostly used for logs
+tar     used for un- and compressing a file
+tee     pipe fitting
+top	display and update sorted information about processes
+which   locate a program file in the user's path
+whoami	display effective user id
+

@@ -1,22 +1,19 @@
 \documentclass[10pt,a4paper]{scrartcl}
 %=============================================================================
-\usepackage[T1]{fontenc}  
-\usepackage[utf8x]{inputenc}  
+\usepackage[utf8]{inputenc}  
 \usepackage[normalem]{ulem} % \emph should italicize, not underline
-\usepackage{cite}
-\usepackage{graphicx}
-%\usepackage{parskip}
-\usepackage{xspace}
 \usepackage{alltt}
-\usepackage{amssymb,textcomp}
-\usepackage{ifthen}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{subfigure}
-\usepackage{amsmath}
-\usepackage{xspace}
 \usepackage{bold-extra}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{subfigure}
+\usepackage{xspace}
 
+% this cane be used to make sure a block of code is printed as whole and not
+% split at a page break
 \usepackage{needspace}
 \newcommand{\needlines}[1]{\Needspace{#1\baselineskip}}
 
@@ -83,21 +80,6 @@
 %=============================================================================
 \subsection{Commands}
 \begin{description}
-\item[\texttt{cat}]
-
-\item[\texttt{cd}]
-
-\item[\texttt{cp}]
-
-\item[\texttt{ls}]
-
-\item[\texttt{man}]
-
-\item[\texttt{mkdir}]
-
-\item[\texttt{mv}]
-
-\item[\texttt{pwd}]
 
 \item[\texttt{rm}]
     \begin{terminalcode}
@@ -106,10 +88,6 @@ todelete.txt
 cami@bender:~/test$ rm todelete.txt 
 cami@bender:~/test$ ls
     \end{terminalcode}
-
-\item[\texttt{ssh}]
-
-\item[\texttt{svn}]
 
 \item[\texttt{touch}] updates the access and modification times of each FILE to 
     the current time.
@@ -128,23 +106,11 @@ cami@bender:~/test$ ls -l
 ~/test$ ls
 emptyfile.txt
     \end{terminalcode}
+
+
+% add your own remarks here by reusing the existing examples
+
 \end{description}
-
-%=============================================================================
-\subsection{Pipes}
-
-\texttt{ls -a | grep log}
-
-
-1. Terminal Einfuehrung
-- kurze Einführung in Bash
-- Grundlegende Befehle zur Navigation: ls, cd, pwd und tab completion.
-
-3. Terminal PRO
-- Argumente fuer Befehle (ls -a ...)
-- Sich selber helfen mit "man"
-- Weitere Befehle mit praktischen Übungen: cp, mv, cat (find locate)
-- Vielleicht: Enführung in Pipes und grep
 
 %=============================================================================
 \section{Documentation with Latex}
@@ -152,43 +118,17 @@ emptyfile.txt
 \subsection{Introduction}
 % give general introduction here
 
-%=============================================================================
-\subsection{}
-% write down most used commands
-2. Dokumentation / Latex (Muss am Schluss abgegeben werden und wird  kontrolliert)
-- svn co gegebene Projektstruktur
-- Kurze Einführung in Latex
-- Latex to PDF via vorhandenes Make Script.
-- Vorlage bearbeiten und eigene Dokumentation einfügen (copy paste)
-- Vielleicht Grundlagen Terminaleditor (Vim oder Emacs) steht noch  zur Diskussion
+Whenever you need to lookup a certain symbol for \LaTeX\xspace we suggest you to use
+the online recognition tool \texttt{detexify} at \url{http://detexify.kirelabs.org/}.
 
 
 %=============================================================================
-\section{Editing Files with VIM}
-%=============================================================================
-\subsection{Introduction}
-
-%=============================================================================
-\subsection{Basics}
-Follow the instruction of the \texttt{vimtutor}.
-
+\subsection{Common Commands}
 
 
 %=============================================================================
-\section{Programming with Ruby}
+\section{Ruby Programming}
 %=============================================================================
-4. Scriptprogrammieren mit Ruby
-- Kurze Einführung in Ruby
-- Hilfe holen mit Ruby
-- Kleine Anweisungen ausführen (ausgabe, loops)
-- Anweisungen als ausführbares Script speichern und bearbeiten
-
-5. Erweitertes Programmieren mit Ruby
-- Grundlegende Kontrollstrukturen: if und loops
-- Werte speichern in Variabeln
-- Argumente einlesen
-- Bestehende Bibliotheken verwenden
-%=======================================================================
 
 
 \end{document}

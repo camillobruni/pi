@@ -1,0 +1,194 @@
+\documentclass[10pt,a4paper]{scrartcl}
+%=============================================================================
+\usepackage[T1]{fontenc}  
+\usepackage[utf8x]{inputenc}  
+\usepackage[normalem]{ulem} % \emph should italicize, not underline
+\usepackage{cite}
+\usepackage{graphicx}
+%\usepackage{parskip}
+\usepackage{xspace}
+\usepackage{alltt}
+\usepackage{amssymb,textcomp}
+\usepackage{ifthen}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\usepackage{xspace}
+\usepackage{bold-extra}
+
+\usepackage{needspace}
+\newcommand{\needlines}[1]{\Needspace{#1\baselineskip}}
+
+% source code formatting
+\usepackage{listings}
+	% global settings for source code listing pacakage
+\lstset{
+    basicstyle=\ttfamily,
+    showspaces=false,
+    showstringspaces=false,
+    captionpos=b, 
+    columns=fullflexible}
+	% define the listing shortcuts for java and python
+\lstnewenvironment{terminalcode}[1][]{\lstset{language=bash,#1}}{} 
+
+%----------------------------------------------------------------------------
+
+% enabled links in pdf, but paint them normal in black
+\usepackage[pdftex=true, colorlinks=true, urlcolor=black, 
+			linkcolor=black,pagecolor=black,citecolor=black,
+			bookmarks=true]{hyperref}
+
+%=============================================================================
+
+\date{HS 2009 Universität Bern}
+\author{Camillo Bruni}
+\title{Programming Introduction}
+\begin{document}
+
+%=============================================================================
+\section{Terminal}
+%=============================================================================
+\subsection{Introduction}
+\begin{terminalcode}
+> uname -mns
+  Darwin imac.local i386
+  Report bugs to <bug-coreutils@gnu.org>.
+> uname -mns
+  Darwin mbkp.local i386
+> ssh anker.unibe.ch
+  user@bender.unibe.ch's password: 
+> uname
+  Linux
+> uname -mon
+  bender x86_64 GNU/Linux
+> uname --help
+  Usage: uname [OPTION]...
+  Print certain system information.  With no OPTION, same as -s.
+  
+    -a, --all                print all information, in the following order,
+                               except omit -p and -i if unknown:
+    -s, --kernel-name        print the kernel name
+    -n, --nodename           print the network node hostname
+    -r, --kernel-release     print the kernel release
+    -v, --kernel-version     print the kernel version
+    -m, --machine            print the machine hardware name
+    -p, --processor          print the processor type or "unknown"
+    -i, --hardware-platform  print the hardware platform or "unknown"
+    -o, --operating-system   print the operating system
+        --help     display this help and exit
+        --version  output version information and exit
+\end{terminalcode}
+
+%=============================================================================
+\subsection{Commands}
+\begin{description}
+\item[\texttt{cat}]
+
+\item[\texttt{cd}]
+
+\item[\texttt{cp}]
+
+\item[\texttt{ls}]
+
+\item[\texttt{man}]
+
+\item[\texttt{mkdir}]
+
+\item[\texttt{mv}]
+
+\item[\texttt{pwd}]
+
+\item[\texttt{rm}]
+    \begin{terminalcode}
+cami@bender:~/test$ ls
+todelete.txt
+cami@bender:~/test$ rm todelete.txt 
+cami@bender:~/test$ ls
+    \end{terminalcode}
+
+\item[\texttt{ssh}]
+
+\item[\texttt{svn}]
+
+\item[\texttt{touch}] updates the access and modification times of each FILE to 
+    the current time.
+    \begin{terminalcode}
+cami@bender:~/test$ ls -l
+-rw-r--r-- 1 cami cami 0 2009-08-25 20:29 date.txt
+cami@bender:~/test$ touch date.txt 
+cami@bender:~/test$ ls -l
+-rw-r--r-- 1 cami cami 0 2009-08-25 20:30 date.txt
+    \end{terminalcode}
+
+    It can be very useful to create a new empty file on the fly:
+    \begin{terminalcode}
+~/test$ ls
+~/test$ touch emptyfile.txt
+~/test$ ls
+emptyfile.txt
+    \end{terminalcode}
+\end{description}
+
+%=============================================================================
+\subsection{Pipes}
+
+\texttt{ls -a | grep log}
+
+
+1. Terminal Einfuehrung
+- kurze Einführung in Bash
+- Grundlegende Befehle zur Navigation: ls, cd, pwd und tab completion.
+
+3. Terminal PRO
+- Argumente fuer Befehle (ls -a ...)
+- Sich selber helfen mit "man"
+- Weitere Befehle mit praktischen Übungen: cp, mv, cat (find locate)
+- Vielleicht: Enführung in Pipes und grep
+
+%=============================================================================
+\section{Documentation with Latex}
+%=============================================================================
+\subsection{Introduction}
+% give general introduction here
+
+%=============================================================================
+\subsection{}
+% write down most used commands
+2. Dokumentation / Latex (Muss am Schluss abgegeben werden und wird  kontrolliert)
+- svn co gegebene Projektstruktur
+- Kurze Einführung in Latex
+- Latex to PDF via vorhandenes Make Script.
+- Vorlage bearbeiten und eigene Dokumentation einfügen (copy paste)
+- Vielleicht Grundlagen Terminaleditor (Vim oder Emacs) steht noch  zur Diskussion
+
+
+%=============================================================================
+\section{Editing Files with VIM}
+%=============================================================================
+\subsection{Introduction}
+
+%=============================================================================
+\subsection{Basics}
+Follow the instruction of the \texttt{vimtutor}.
+
+
+
+%=============================================================================
+\section{Programming with Ruby}
+%=============================================================================
+4. Scriptprogrammieren mit Ruby
+- Kurze Einführung in Ruby
+- Hilfe holen mit Ruby
+- Kleine Anweisungen ausführen (ausgabe, loops)
+- Anweisungen als ausführbares Script speichern und bearbeiten
+
+5. Erweitertes Programmieren mit Ruby
+- Grundlegende Kontrollstrukturen: if und loops
+- Werte speichern in Variabeln
+- Argumente einlesen
+- Bestehende Bibliotheken verwenden
+%=======================================================================
+
+
+\end{document}

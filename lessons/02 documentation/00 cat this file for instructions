@@ -1,26 +1,35 @@
 Ask the assistant for setting up the documentation for you.
 Then checkout the documentation template written in Latex from:
 
-http://bender.unibe.ch/svn/PE/students/YOUR_USER_NAME/
+http://bender.unibe.ch/svn/pi/students/YOUR_USER_NAME/
 
-using the following commands ("cd" and "svn"):
+using the following commands ("cd", "pwd", "ls" and "svn").
+Note that the lines starting with a hash # are comments.
 
+>> # check where we are
+>> pwd
 >> # first change the current working directory
->> cd .. 
+>> cd ../..
+>> # then check again
+>> pwd
 
->> # then we get the documentation from the server
->> svn checkout http://bender.unibe.ch/svn/PE/students/YOUR_USER_NAME/ documentation
+>> # then we get the documentation from the server by using the "svn" command
+>> # Where YOUR_USER_NAME@students.unibe.ch
+>> svn checkout http://bender.unibe.ch/svn/pi/students/YOUR_USER_NAME/ documentation
 
 >> # lets check if everything is here and list all the files in the 
 >> # current working directory
 >> ls
 
->> # now let's see whats in that documentation directory
+>> # now let's see whats in that documentation directory you just checked out
 >> cd documentation
 >> ls
 
 >> # to edit the documentation open it with vim (in the terminal)
->> vim docu.tex
+>> vim documentation.tex
 
 >> # after saving create the pdf file using the following command
 >> make
+
+>> # or you can directly create AND view the pdf which is usually more convenient
+>> make view

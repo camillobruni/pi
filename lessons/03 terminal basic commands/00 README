@@ -1,15 +1,14 @@
-INFO:
-
-In the following lessons each folder will have a README file.
-Either "cat" the file or open it with vim ( or your editor of choice) to
-read it.
+In the following lessons each folder will have either have a README file
+or just file named with the instructions. If there should be more information
+available try to read the file's contents. Either "cat" or "less" the file; 
+or open it with vim (or your editor of choice) to read it.
 
 We expect you to write down for each lesson a few sentences in the 
 documentation. We will gather all the documentations in the end, and
 give you a quick review via email.
 
 If you encounter a problem with a command you do not understand, 
-here is what you have to do:
+here is what you have to do (http://xkcd.com/627/):
     1. try
     2. try again :)
     3. search the web
@@ -21,21 +20,14 @@ If you're not sure exactely what to do, JUST ASK!
 
 # ----------------------------------------------------------------------------
 
-LESSON 03:
-
 In this lesson you should learn the basic commands for the terminal (bash).
-First read the chapter in the documentation and have a quick look at the 
-list of commands.
 Try to solve all the exercises in this folder, and don't forget to update your
-documentation. 
+documentation if you see something special. 
 By starting with the "man" command you know how to get information about a
-typical unix command. Another way to get that is to run something like this:
+typical unix command. Another way to get that is running something like this:
 
 >> YOUR_COMMAND --help
 
-By adding "--help" you tell the command to print its own help. Usually this 
-is mostly about all the possible options of a command, which is not that
-important for you at the moment. Each time we want you to use a certain option
-we will explicitely tell you in the exercise.
-
-
+By adding "--help" you tell the command to print its own help. Usually this
+will display a list with all the command's options. By using "man" you get
+a more complete descriptions of the command and its options.

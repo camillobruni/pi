@@ -1,37 +1,47 @@
 Q: 	Why is all this text written in english?
-A: 	Most computer scientists speak, and more importantly, fluently read it. 
+A: 	Most computer scientists speak and more importantly, fluently read it. 
 	By writing this document in english everybody can reuse it. 
 
 Q: 	How do I open the terminal?
 A:	On Linux with KDE running:
+		Dock -> Utilities -> Terminal
+	
 	On Linux with Gnome running:
-        
+		Applications -> System Tools -> Terminal
+		
 	On Mac OS X:
 		/Applications/Utilities/Terminal.app
 		otherwise use Spotlight to search for it.
 		
+Q: 	Why should I use several tabs while working with the command line?
+A:	Normally you work at several locations at the same time. Thus its much
+	more convenient just switching tabs instead of going to the other 
+	location.
+		
 Q:	How do I run a command?
 A:	Just type the command, for instance "whoami" and then hit enter.
 
-Q: 	Why is there Text written in Uppercase?
-A:	Uppercase text, for example YOURCOMMAND  should be replaced by something 
+Q: 	Why is there Text written in uppercase?
+A:	Uppercase text, for example YOURCOMMAND should be replaced by something 
 	you write yourself.
 	
 Q: 	How does a command work?
 A:	A command has usually the form "YOURCOMMAND --options... arguments...".
 
 Q:	My terminal is blocked and I cannot write anymore!
-A:	Most probably your command just died :). To kill it by typing Ctrl-C
+A:	Most probably your command just froze :). Kill it by typing Ctrl-C
 
 Q:	Where am I?
-A: 	Use "pwd" to print your current location. 
+A: 	Use "pwd" (Print Working Directory) to print your current location. 
 
-Q:	How do I go to that PATH?
-A:	Use the command "cd PATH". Type "help cd" to see what "cd" is more about.
+Q:	How do I go to that PATH/directory/folder?
+A:	Use the command "cd PATH".
+    You can always check your location with "pwd".
 
 Q: 	How do I go one folder up?
-A:	Use "cd .." to go one folder up. ".." just means the parent folder, 
-	whereas "." represents the current folder.
+A:	Use "cd .." to go one folder up.
+    ".." just means the parent folder.
+	"." represents the current folder.
 
 Q:	How do I jump to my home-folder?
 A:	Type "cd ~" or just "cd" and the hit enter, that will do it.
@@ -41,15 +51,15 @@ Q: 	How do I list the contents of a folder?
 A:	Type "ls" or "ls ." which mean the same thing.
 
 Q: 	How do I list the contents with more color and more information?
-A:	Type use "ls" with the options "G", "l" and "F". So type "ls -GlF".
+A:	Use "ls" with the options "G", "l" and "F". So type "ls -GlF".
 
 Q:	How do I get more information about COMMAND?
 A:	Type "man COMMAND", "info COMMAND", "help COMMAND" or "whatis COMMAND".
 	Or usually the easiest and most compact way is to use "COMMAND --help".
 
 Q:	Help! "man" doesn't quit!
-A:	Use "q" to quit "man". Note that this works for "less" and a couple of
-	other commands as well.
+A:	Use "q" to quit "man".
+    Note that this works for "less" and a couple of other commands as well.
 
 Q:	What is TAB-completion?
 A:	Most modern computer-terminals feature tab auto-completion. To see what
@@ -79,9 +89,10 @@ A:	Ctrl-a lets the cursor jump to the beginning of the line
 
 Q:	Argh! The output doesn't fit on the screen. How am I supposed to read it?
 A:	Pipe the output directly to "less": "YOURCOMMAND | less"
+	Now you can scroll with the arrow keys up and down. Again use "q" to exit.
 
 Q: 	I think one of these exercises is broken!!
-A: 	1. Keep calm
+A: 	1. Stay calm
 	2. Don't close the windows!
 	3. Secure yourself
 	4. Call the assistant
@@ -89,6 +100,9 @@ A: 	1. Keep calm
 	
 Q:	I think this can be done better?
 A:	That's great! Just inform us and we will update the exercise.
+
+Q:	How do I have to update the exercises if something changed?
+A:	Change to the "lessons" directory then do a "svn up".
 
 Q: 	What do I do next?
 A: 	Have a little break! Then continue with the 01 vim introduction.

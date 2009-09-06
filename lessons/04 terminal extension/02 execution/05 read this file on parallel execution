@@ -1,0 +1,22 @@
+If you want to execute several commands in parallel you can do that by using
+the single ampersand "&":
+
+>> (sleep 1 && echo 1 ) & echo 2
+[3] 27733
+2
+[2]   Done                    ( sleep 1 && echo 1 )
+1
+
+Lets have a look at this command in detail:
+
+    sleep 1     just blocks for one second
+    echo 1      outputs 1
+    echo 2      outputs 2
+
+The sleep with the first echo are executed in parallel with the second echo.
+
+    -> start            -> start
+    sleep 1             echo 2
+    -> still sleeping   -> finished
+    echo 1             
+    -> finished

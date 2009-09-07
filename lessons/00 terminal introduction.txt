@@ -64,7 +64,7 @@ A:	Use "q" to quit "man".
 Q:	What is TAB-completion?
 A:	Most modern computer-terminals feature tab auto-completion. To see what
 	that actually means type "cd /h" then TAB and see how it gets expanded to
-	"ls /home", then hit enter to list everything in "/home".
+	"cd /home", then hit enter to list everything in "/home".
 	
 Q:	Why would I use TAB-completion?
 A:	Because you are lazy and you the TAB-key is your best friend and of 

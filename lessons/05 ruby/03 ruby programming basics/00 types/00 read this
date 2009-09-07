@@ -1,0 +1,8 @@
+ Strings can be creating with the following syntax:
+ 
+ >> "Hello String"
+ >> 'Hello another String'
+
+ To see what type a String has type the following for any String:
+
+ >> "foo".class

@@ -152,7 +152,32 @@ remote login program with secure encrypted communications
 \\ssh A connects with A
 \\logout disconnects from the machine
 
-\subsubsectioin{
+\subsubsection{svn}
+subversions
+\\svn ci --file A --force-log writes file A on server
+
+\subsubsection{grep}
+print lines matching a pattern in a file
+\\grep A B shows every line in the file B that contains A
+\\grep A B -c shows the amount of lines containing a A
+\\grep A B -n shows the linenumber in front of each matching line
+\\grep A B -v -c shows the amount of lines which do NOT contain a A
+\\grep -e A -e B C shows every line in the file C that contains A and B
+
+\subsubsection{sort}
+sort lines
+\\sort A sorts lines of textfile A 1-9 A-Z
+\\sort -r A sorts lines of A Z-A 9-1
+
+\subsubsection{wc}
+prints lines, words and bytes for a file
+\\wc A prints lines, words, bytes of A
+\\wc -l A prints only lines and file name A
+
+\subsubsection{du}
+estimate file space usage
+\\
+
 
 % add your own remarks here by reusing the existing examples
 

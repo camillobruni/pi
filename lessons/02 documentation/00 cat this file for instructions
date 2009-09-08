@@ -33,3 +33,8 @@ Note that the lines starting with a hash # are comments.
 
 >> # or you can directly create AND view the pdf which is usually more convenient
 >> make view
+
+
+Now read the docuemnt carfully and try to make the link between the source
+file "documentation.tex" and the viewed pdf. The goal is to write down all
+the notes for this course in latex.

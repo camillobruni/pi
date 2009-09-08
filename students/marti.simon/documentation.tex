@@ -34,7 +34,7 @@
 %=============================================================================
 
 \date{HS 2009 University Bern}
-\author{PUT YOUR NAME HERE}
+\author{Simon Marti}
 \title{Programming Introduction}
 \begin{document}
 
@@ -102,7 +102,49 @@ cami@bender:~/test$ ls -l
 emptyfile.txt
     \end{terminalcode}
 
+\item[\texttt{man}] shows the manual pages of the given command.
+	\begin{terminalcode}
+$ man <comman>
+$ man man
+	\end{terminalcode}
 
+\item[\texttt{ls}] shows the content of the current working directory.
+	\begin{terminalcode}
+$ ls
+documentation.aux
+documentation.log
+documentation.out
+documentation.pdf
+documentation.tex
+documentation.tex~
+Makefile
+test.tex
+$ ls -R
+.:
+documentation.aux
+documentation.log
+documentation.out
+documentation.pdf
+documentation.tex
+documentation.tex~
+folder
+Makefile
+test.tex
+
+./folder:
+test.txt
+	\end{terminalcode}
+
+\item[\texttt{mv}] moves and renames files and directorys
+	\begin{terminalcode}
+$ mv a b
+	\end{terminalcode}
+This command does the folloing:
+	\begin{description}
+\item[If there is a directory named b:] a will be moved into b
+\item[If there is a file named b and a isn't a directory:] b will be overwritten by a
+\item[If there isn't anything named b:] a is now named b
+	\end{description}
 % add your own remarks here by reusing the existing examples
 
 \end{description}

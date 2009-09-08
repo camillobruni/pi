@@ -34,10 +34,10 @@
 %=============================================================================
 
 \date{HS 2009 University Bern}
-\author{PUT YOUR NAME HERE}
+\author{Christa Biberstein}
 \title{Programming Introduction}
 \begin{document}
-
+\maketitle
 %=============================================================================
 \section{Terminal}
 %=============================================================================
@@ -76,7 +76,77 @@
 \subsection{Commands}
 \begin{description}
 
-\item[\texttt{rm}]
+\item[\bf{pwd}] print working directory
+    \begin{terminalcode}
+[kurs16@kollwitz documentation]$ pwd
+/home/kurs16/Documents/documentation
+\end{terminalcode}
+
+
+\item[\bf{ls}]list directory contents
+    \begin{terminalcode}
+[kurs16@kollwitz documentation]$ ls
+documentation.aux  documentation.log  documentation.out  documentation.pdf  documentation.tex  Makefile
+\end{terminalcode}
+
+
+\item[\bf{cd}] change the working directory
+    \begin{terminalcode}
+1[kurs16@kollwitz ~]$ cd Documents/
+ [kurs16@kollwitz ~/Documents]$ 
+2[kurs16@kollwitz documentation]$ cd ..
+ [kurs16@kollwitz ~/Documents]$ 
+3 cd ~   change to home
+ [kurs16@kollwitz documentation]$ cd ~
+ [kurs16@kollwitz ~]$ 
+\end{terminalcode}
+
+
+\item[\bf{:w}] save
+
+\item[\bf{q}] quit
+
+\item[\bf{whoami}] print effective userid
+    \begin{terminalcode}
+[kurs16@kollwitz lessons]$ whoami
+kurs16
+    \end{terminalcode}
+
+\item[\bf{Ctrl-C}] if the command is frozen kill it by typing Ctrl-C.
+
+\item[\bf{ls -GlF}] list the contents with more information 
+    \begin{terminalcode}
+[kurs16@kollwitz lessons]$ ls -GlF
+total 24
+-rw-r--r--  1 kurs16 4086 2009-09-08 09:10 00 terminal introduction.txt
+drwxr-xr-x  3 kurs16 4096 2009-09-08 09:10 01 vim introduction/
+drwxr-xr-x  3 kurs16 4096 2009-09-07 09:16 02 documentation/
+drwxr-xr-x 22 kurs16 4096 2009-09-07 09:16 03 terminal basic commands/
+drwxr-xr-x  6 kurs16 4096 2009-09-07 09:16 04 terminal extension/
+drwxr-xr-x  7 kurs16 4096 2009-09-08 09:10 05 ruby/
+    \end{terminalcode}
+
+\item[\bf{whatis COMMAND}] more information about a COMMAND
+    \begin{terminalcode}
+[kurs16@kollwitz documentation]$ whatis ls
+ls                   (1)  - list directory contents
+also "man COMMAND", "info COMMAND", "help COMMAND", "COMMAND --help"    
+    \end{terminalcode}
+
+\item[\bf{TAB}] tab auto-completion
+    \begin{terminalcode}
+[kurs16@kollwitz ~]$ cd Doc "TAB"
+[kurs16@kollwitz ~]$ cd Documents/ 
+    \end{terminalcode}
+
+\item[\bf{COMMAND | less}] useful if the output doesn't fit on the screen
+    \begin{terminalcode}
+Now you can scroll with the arrow keys up and down. Again use "q" to exit.
+    \end{terminalcode}
+
+\item[\bf{svn up}] update changes
+
+\item[\bf{rm}]
     \begin{terminalcode}
 cami@bender:~/test$ ls
 todelete.txt
@@ -84,9 +154,9 @@ cami@bender:~/test$ rm todelete.txt
 cami@bender:~/test$ ls
     \end{terminalcode}
 
-\item[\texttt{touch}] updates the access and modification times of each FILE to 
+\item[\bf{touch}] updates the access and modification times of each FILE to 
     the current time.
-   	\begin{terminalcode}
+        \begin{terminalcode}
 cami@bender:~/test$ ls -l
 -rw-r--r-- 1 cami cami 0 2009-08-25 20:29 date.txt
 cami@bender:~/test$ touch date.txt 
@@ -101,6 +171,158 @@ cami@bender:~/test$ ls -l
 ~/test$ ls
 emptyfile.txt
     \end{terminalcode}
+
+
+
+
+\item[\large{How to use vim:}]
+
+\item[\bf{vim DOCUMENT}] Vi IMproved, a programmers text editor (opens the document)
+
+\item[\bf{h}] move left
+
+\item[\bf{j}] move down
+
+\item[\bf{k}] move up
+
+\item[\bf{l}] move right
+
+\item[\bf{:q!}] exit vim and trash all changes
+
+\item[\bf{:wq}] exit vim and save all changes
+
+\item[\bf{:w}] save all changes
+
+\item[\bf{x}] To delete the character at the cursor type
+
+\item[\bf{i}] type inserted text (insert before the cursor)
+
+\item[\bf{A}] type appended text (append after the line)
+
+\item[\bf{ESC}]  Pressing <ESC> will place you in Normal mode or will cancel
+      an unwanted and partially completed command.
+
+\item[\bf{d}] to delete
+
+\item[\bf{dw}] To delete from the cursor up to the next word
+
+\item[\bf{d\$}] To delete from the cursor to the end of a line
+
+\item[\bf{dd}] To delete a whole line
+
+\item[\bf{w}] until the start of the next word, EXCLUDING its first character
+
+\item[\bf{e}] to the end of the current word, INCLUDING the last character
+
+\item[\bf{\$}] to the end of the line, INCLUDING the last caracter
+
+\item[\bf{0}] to move to the start of the line
+
+\item[\bf{No.Motion}] Typing a number before a motion repeats it that many times
+
+\item[\bf{u}] to undo the last command executed/ previous action
+
+\item[\bf{U}] to undo all the changes on a line
+
+\item[\bf{Ctrl-R}] to undo the undo's
+
+      operator - is what to do, such as  d  for delete
+      [number] - is an optional count to repeat the motion
+      motion   - moves over the text to operate on, such as  w (word),
+                  \$ (to the end of line), etc.
+
+\item[\bf{p}] to put previously deleted text after the cursor
+
+\item[\bf{r}] To replace the character under the cursor, type   r   and then the
+     character you want to have there.
+
+\item[\bf{c}]  The change operator allows you to change from the cursor to where the
+     motion takes you.  eg. Type  ce  to change from the cursor to the end of
+     the word,  c\$  to change to the end of a line.
+
+\item[\bf{Ctrl-G}] displays your location in the file and the file status.
+
+\item[\bf{G}] moves to the end of the file
+
+\item[\bf{No.G}] moves to that line number
+
+\item[\bf{gg}] moves to the first line
+
+\item[\bf{/}] followed by a phrase searches FORWARD for the phrase
+
+\item[\bf{?}] followed by a phrase searches BACKWARD for the phrase
+
+\item[\bf{n}] to find the next occurrence in the same direction after a search
+
+\item[\bf{N}] to find the next occurrence in the opposite direction after a search
+
+\item[\bf{Ctrl-O}] takes you back to older positions
+
+\item[\bf{Ctrl-I}] takes you back to newer positions
+
+\item[\bf{\%}] while the cursor is on a (,),[,],{, or } goes to its match
+
+\item[\bf{:s/old/new}] to substitute new for the first old in a line
+
+\item[\bf{:s/old/new/g}] To substitute new for all 'old's on a line type 
+
+\item[\bf{:\#,\#s/old/new/g}] To substitute phrases between two line \#'s type
+
+\item[\bf{:\%s/old/new/g}] To substitute all occurrences in the file type
+
+\item[\bf{:\%s/old/new/gc}] To ask for confirmation each time add 'c'
+
+\item[\bf{:!}] Type  :!  followed by an external command to execute that command
+
+Examples: (MS-DOS)         (Unix)
+          :!dir            :!ls            -  shows a directory listing.
+          :!del FILENAME   :!rm FILENAME   -  removes file FILENAME.
+
+\item[\bf{:w FILENAME}] writes the current Vim file to disk with name FILENAME
+
+\item[\bf{v  motion  :w FILENAME}]  saves the Visually selected lines in file FILENAME
+
+\item[\bf{:r FILENAME}] retrieves disk file FILENAME and puts it below the
+      cursor position.
+
+\item[\bf{:r !dir}] reads the output of the dir command and puts it below the
+      cursor position.
+
+\item[\bf{o}] to open a line BELOW the cursor and start Insert mode.
+
+\item[\bf{O}] to open a line ABOVE the cursor and atart Insert mode.
+
+\item[\bf{a}] to insert text AFTER the cursor.
+
+\item[\bf{A}] to insert text after the end of the line.
+
+\item[\bf{y}] operator yanks (copies) text
+
+\item[\bf{R}] Typing a capital  R  enters Replace mode until  <ESC>  is pressed.
+
+\item[\bf{Typing ":set xxx" sets the option "xxx".}] 
+       Some options are:
+        'ic' 'ignorecase'       ignore upper/lower case when searching
+        'is' 'incsearch'        show partial matches for a search phrase
+        'hls' 'hlsearch'        highlight all matching phrases
+       You can either use the long or the short option name.
+
+\item[\bf{:set noic}] Prepend "no" to switch an option off
+
+\item[\bf{help}]
+  1. Type  :help  or press <F1> or <Help>  to open a help window.
+
+  2. Type  :help cmd  to find help on  cmd .
+
+  3. Type  CTRL-W CTRL-W  to jump to another window
+
+  4. Type  :q  to close the help window
+
+  5. Create a vimrc startup script to keep your preferred settings.
+
+  6. When typing a  :  command, press CTRL-D to see possible completions.
+     Press <TAB> to use one completion.
+
 
 
 % add your own remarks here by reusing the existing examples
@@ -184,6 +406,86 @@ is added with a \verb$\item$ between the \texttt{begin} and \texttt{end}.
 	\item Lc4 d6
 \end{enumerate}
 
+\subsubsection{Math, \LaTeX 's real strengths}
+A much longer introduction, although still called a short math guide, is 
+avaiable online at \url{ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf}.
+
+\begin{description}
+
+\item[Inline Mode]
+Equations with numeration with \verb$\begin{equation} FORMULA \end{equation}$:
+\begin{equation} 
+E_{kin} = \frac 1 2 m v^2
+\end{equation}
+
+Equations without numeration with \verb$\begin{equation*} FORMULA \end{equation*}$:
+\begin{equation*} 
+E_{kin} = \frac 1 2 m v^2
+\end{equation*}
+
+Shortcut using \verb$\[ FORMULA \]$:
+\[ -\frac{\hbar}{2m}\Delta\Phi(\vec r) + V(\vec r)\Phi(\vec r) = E\Phi(\vec r) \]
+
+Inline mode with \verb|$ FORMULA $| displays as 
+$\int_\infty^\infty |\psi(x)^2|\mathrm{dx} = 1$.
+
+\item[Parenthesis]
+\[ \Biggl( \biggl( \Bigl( \bigl( ( ) \bigr) \Bigr) \biggr) \Biggr) \]
+
+\item[Spaces]
+\begin{tabular}[t]{lll}
+Small spaces        & \verb$\_$     & $ y=x^{2} \_ y'=2x \_  y''=2 $ \\
+Middle sized spaces & \verb$\quad$  & $ y=x^{2} \quad y'=2x \quad  y''=2 $ \\
+Big spaces          & \verb$\qquad$ & $ y=x^{2} \qquad y'=2x \qquad  y''=2 $
+\end{tabular}
+
+\item[Indices and Powers]
+\[ a_i, x^{n+1} \qquad a_{ij} + b_{ij} = p_{ij} \qquad 
+    \text{\ldots and nested} \qquad
+    a_{x_ij} = n_{x^{2^b_n}} \]
+
+\item[Fractions]
+\[  \frac{Zaehler}{Nenner} \qquad 
+    \frac{a}{b} + \frac{c}{b} = \frac{ a+c}{b} \qquad
+    \frac{\frac{\frac{a}{b}}{c}}{d} \qquad
+    \frac {{n+1 \choose k/2}} {5!} \]
+
+\noindent In the simple math environment two FORMULAdifferent sized fractions can be 
+used; the small fractions $\frac{1}{2}$ or the normal sized $\dfrac{1}{x}$.
+
+\item[Roots]    
+\[  \sqrt[\text{root depth}]{\text{root term}} \qquad
+    \sqrt{x+y-z}, \sqrt[5]{4+x} \]
+                
+\item[Functions]
+\[ f : \mathbb{N} \to \mathbb{R} \qquad f : x \mapsto x^2\]
+Mathematical functions are writtein explicitely written in normal text not
+math mode text:
+\[ \sin(x) = \text{sin}(x) \text{ {\bf and not }} sin(x)\]
+
+\item[Varia]
+\[ \left( \sqrt{\frac{A^C}{B_y}} +       \sum_{i=1}^N a_i\right) \]
+\[ A \stackrel {\lambda_a} {\longrightarrow} B \]
+\[ \int \! \! \int z\,dx \, dy \quad \mbox {\bf not} \quad \int\int z dx dy \]
+\[ \int \! \! \int z\,dx \, dy \quad \mbox {\bf not} \quad \int\int z dx dy \]
+                                
+{\Large
+\[ \Leftarrow \  \Leftrightarrow \  \Longleftrightarrow \  \Rightarrow \_ 
+    \Uparrow \  \Updownarrow \  \Downarrow      \]}
+                                
+\[\bigcap \cap \sum \int_0^{2\pi} \vec{a} \dot{a} \ddot{a} a^{\prime \prime} \]
+
+
+\item[Matrices]
+\[ \det A = \| a_{ik} \| =
+\left| \begin{array}{ccccc}
+    a_{11} & a_{12} & a_{13} &  \cdots & a_{1n} \\
+    a_{21} & a_{22} & a_{23} &  \cdots & a_{2n} \\
+    \vdots  & \vdots  & \vdots  & \ddots & \vdots\\
+    a_{n1} & a_{n2} & a_{n3} &  \cdots & a_{nn} \\
+\end{array} \right| . \]
+
+\end{description}
 
 %=============================================================================
 \section{Ruby Programming}

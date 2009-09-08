@@ -132,7 +132,7 @@ exist several sectioning levels:
 \end{enumerate}
 
 \noindent To enforce \LaTeX to use a newline add a double slash \verb$\\$ at 
-the end of a line.
+the end of a li& ne.
 
 \subsubsection{Schriftgrösse / -style}
 \begin{tabular}{lll}                                                          
@@ -188,6 +188,84 @@ is added with a \verb$\item$ between the \texttt{begin} and \texttt{end}.
 %=============================================================================
 \section{Ruby Programming}
 %=============================================================================
+\section{Terminal}
+\subsection{mkdir (make directories)}
 
 
+\begin{enumerate} 
+	\item & {mkdir \underline{Name von directory}}\\
+		{\small{erstelle einen Ordner}}		
+	\item & {mkdir -p \underline{Directory1/Directory2/Directory3}}\\
+ 		{\small{erstelle einen Ordner Directory3 im Ordner Directory2, der sich im Ordner Directroy1 befindet}}
+
+\end{enumerate}
+
+\subsection{touch (create a new file)} 
+\begin{enumerate}
+	\item {touch \underline{Name von file}}
+\end{enumerate}
+
+\subsection{mv (move files)}
+\begin{enumerate}
+	\item {mv \underline{a b}}\\
+	      {\small{verschiebe den Ordner a in den Ordner b}}
+	\item {mv \underline{b/a .}}\\
+	      {\small {verschiebe den Ordner a, der im Ordner b ist wieder zurueck}}
+	\item {mv \underline{a ei}}\\
+	      {\small{benenne den Ordner a zu ei um}}
+	\item {mv \underline{ei b}}\\
+	      {\small{ueberschreibe den ei zu b um}}
+
+\end{enumerate}
+
+		
+\subsection{cp (copy)}
+\begin{enumerate}
+	\item {cp \underline{a b}}\\
+	      {\small{kopiere files}}
+	\item {cp -r \underline{source source_copy}}\\
+	      {\small{kopiere directories mit allen files}}
+
+\subsection{rm (remove files/directories)}
+\begin{enumerate}
+	\item {rm \underline{a}}\\
+	      {\small{loesche file a}}
+	\item {rm \underline{a b}}\\
+	      {\small{loesche file a und b}}
+	\item {rm -fr \underline{source}}\\
+	      {\small{loesche directory mit files}}
+\end{enumerate}
+
+\subsection{cat}
+\begin{enumerate}
+	\item {cat \underline{a}\\
+	      {\small{oeffne das file a}}\\
+	\item {cat \underline{a > dump.txt}\\}
+	      {\small{verschiebe a zu dump.txt}}
+\end{enumerate}
+
+\subsection{vim}
+\begin{enumerate}
+	\item {vim \underline{a}}\\
+	      {\small{oeffne a im vim->etw. schreiben}}\\
+\end{enumerate}
+
+\subsection{ssh}
+\begin{enumerate}
+	\item {ssh \underline{kurs17@anker.unibe.ch}}\\
+	      {\small{connect to anker.unibe.ch}}\\
+	\item {ssh -X\underline{kurs17@anker.unibe.ch}}\\
+	      {\small{connect to anker.unibe.ch mit Programmansicht}}\\
+	\item {exit}\\
+	      {\small{disconnect from ander.unibe.ch}}
+\end{enumerate}
+\subsection{svn}
+	\item {svn \underline{up}}
+	      {\small{update}}
+	\item {svn \underline{ci}}
+	      {\small{commit}}
+
+
+
+	
 \end{document}

@@ -76,6 +76,8 @@
 \subsection{Commands}
 \begin{description}
 
+\subsubsection{common stuff}
+
 \item[\texttt{rm}]
     \begin{terminalcode}
 cami@bender:~/test$ ls
@@ -103,80 +105,163 @@ emptyfile.txt
     \end{terminalcode}
 
 \subsubsection{man}
+\begin{terminalcode}
 Used to show help by typing
-\\man \ command
+man \ command
+\end{terminalcode}
 
 \subsubsection{cd}
+\begin{terminalcode}
 Used to switch the folders
-\\switch folder up: cd ..
-\\switch in folder: cd FOLDER
-\\switch home: cd ~
+switch folder up: cd ..
+switch in folder: cd FOLDER
+switch home: cd ~
+\end{terminalcode}
 
 \subsubsection{ls}
+\begin{terminalcode}
 list directory content
-\\ls -l shows the content in a list
+ls -l shows the content in a list
+\end{terminalcode}
 
 \subsubsection{pwd}
+\begin{terminalcode}
 print name of current directory
+\end{terminalcode}
 
 \subsubsection{mkdir}
+\begin{terminalcode}
 make directories
-\\mkdir FOLDER creates a FOLDER-named folder
+mkdir FOLDER creates a FOLDER-named folder
+\end{terminalcode}
 
 \subsubsection{touch}
+\begin{terminalcode}
 change file timestamp
-\\change timestamp to 6. Sept. 2h 55min -> touch -t 09060255 FILE
+change timestamp to 6. Sept. 2h 55min -> touch -t 09060255 FILE
+\end{terminalcode}
 
 \subsubsection{mv}
+\begin{terminalcode}
 move or rename a file
-\\move A B moves A in B
-\\move A C renames A in C
-\\move B/C A moves C out of B and renames it in A
+move A B moves A in B
+move A C renames A in C
+move B/C A moves C out of B and renames it in A
+\end{terminalcode}
 
 \subsubsection{cp}
+\begin{terminalcode}
 copy files and directories
-\\cp A B copies A in B
+cp A B copies A in B
+\end{terminalcode}
 
 \subsubsection{rm}
+\begin{terminalcode}
 remove files and directories
-\\rm A B removes A and B
-\\y <enter> to finish operation!
+rm A B removes A and B
+yes <enter> to finish operation!
+\end{terminalcode}
 
 \subsubsection{cat}
+\begin{terminalcode}
 concatenate files and print on the standart output
-\\cat A displays the content of A
-\\cat -n A displays the content of A with all line numbers
+cat A displays the content of A
+cat -n A displays the content of A with all line numbers
+\end{terminalcode}
 
 \subsubsection{ssh}
+\begin{terminalcode}
 remote login program with secure encrypted communications
-\\ssh A connects with A
-\\logout disconnects from the machine
+ssh A connects with A
+logout disconnects from the machine
+\end{terminalcode}
 
 \subsubsection{svn}
+\begin{terminalcode}
 subversions
-\\svn ci --file A --force-log writes file A on server
+svn ci --file A --force-log writes file A on server
+\end{terminalcode}
 
 \subsubsection{grep}
+\begin{terminalcode}
 print lines matching a pattern in a file
-\\grep A B shows every line in the file B that contains A
-\\grep A B -c shows the amount of lines containing a A
-\\grep A B -n shows the linenumber in front of each matching line
-\\grep A B -v -c shows the amount of lines which do NOT contain a A
-\\grep -e A -e B C shows every line in the file C that contains A and B
+grep A B shows every line in the file B that contains A
+grep A B -c shows the amount of lines containing a A
+grep A B -n shows the linenumber in front of each matching line
+grep A B -v -c shows the amount of lines which do NOT contain a A
+grep -e A -e B C shows every line in the file C that contains A and B
+\end{terminalcode}
 
 \subsubsection{sort}
+\begin{terminalcode}
 sort lines
-\\sort A sorts lines of textfile A 1-9 A-Z
-\\sort -r A sorts lines of A Z-A 9-1
+sort A sorts lines of textfile A 1-9 A-Z
+sort -r A sorts lines of A Z-A 9-1
+\end{terminalcode}
 
 \subsubsection{wc}
+\begin{terminalcode}
 prints lines, words and bytes for a file
-\\wc A prints lines, words, bytes of A
-\\wc -l A prints only lines and file name A
+wc A prints lines, words, bytes of A
+wc -l A prints only lines and file name A
+\end{terminalcode}
 
 \subsubsection{du}
+\begin{terminalcode}
 estimate file space usage
-\\
+\end{terminalcode}
+
+\subsubsection{find}
+\begin{terminalcode}
+search for a file
+\end{terminalcode}
+
+\subsubsection{wget}
+\begin{terminalcode}
+download files from the web
+wget http://www.unibe.ch
+saves the file in the same folder as you are
+\end{terminalcode}
+
+\subsubsection{clear}
+\begin{terminalcode}
+clear the display
+\end{terminalcode}
+
+\subsubsection{ping}
+\begin{terminalcode}
+see if a host is online and responds
+\end{terminalcode}
+
+\subsubsection{whoami}
+\begin{terminalcode}
+shows effective user id
+\end{terminalcode}
+
+\subsubsection{connection commands - pipes}
+\begin{terminalcode}grep is grep.txt shows too much stuff
+grep is grep.txt | less shows the same information but
+we can easily navigate through the results from grep.txt
+and quit it with a single :q
+\end{terminalcode}
+
+\subsubsection{store output}
+\begin{terminalcode}by adding the greater than sign >
+grep A B > C saves every line with A in the file C
+grep A B >> C appends every line with A at the end of file C
+\end{terminalcode}
+
+\subsubsection{execute more commands}
+\begin{terminalcode}we can execute more commands in one line
+by adding ; between the commands
+wget unibe.ch; less index.html
+by writing && in pace of ; the second command
+will only be executed if the first one is successfully finished
+the command || works the opposite way and the second command
+is executed if the first fails
+connecting the first and the second command with a
+single ampersand & will make them run parallel
+\end{terminalcode}
 
 
 % add your own remarks here by reusing the existing examples

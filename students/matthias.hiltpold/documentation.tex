@@ -11,7 +11,7 @@
 \usepackage{ifthen}
 \usepackage{subfigure}
 \usepackage{xspace}
-
+\usepackage{color}
 % source code formatting
 \usepackage{listings}
 	% global settings for source code listing pacakage
@@ -34,9 +34,18 @@
 %=============================================================================
 
 \date{HS 2009 University Bern}
-\author{PUT YOUR NAME HERE}
+\author{Matthias Hiltpold}
 \title{Programming Introduction}
 \begin{document}
+% put the title page here
+\maketitle
+
+% put the table of contents here
+\tableofcontents
+
+% add a new page
+\newpage
+
 
 %=============================================================================
 \section{Terminal}
@@ -102,10 +111,156 @@ cami@bender:~/test$ ls -l
 emptyfile.txt
     \end{terminalcode}
 
+\item[\texttt{ls}]shows directories 
 
-% add your own remarks here by reusing the existing examples
+   	\begin{terminalcode}
+[kurs11@vasarely ~]$ ls
+Desktop  documentation  Documents  Download  lessons  Music  Pictures  Public  Templates  Videos
+
+   \end{terminalcode}
+
+\item[\texttt{man}] gets help for all the other commands
+\begin{terminalcode}
+\end{terminalcode}
+
+
+\item[\texttt{cd}] changes the current directory to the chosen dir. 
+\begin{terminalcode}
+[kurs11@vasarely ~]$ ls
+Desktop  documentation  Documents  Download  lessons  Music  Pictures  Public  Templates  Videos
+[kurs11@vasarely ~]$ cd lessons
+[kurs11@vasarely lessons]$ ls
+\00 terminal introduction.txt  02 documentation            04 terminal extension  documentation
+01 vim introduction           03 terminal basic commands  05 ruby
+\end{terminalcode}
+
+
+\item[\texttt{ls}] lists directory content
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{pwd}] prints current working directory
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{mkdir}] makes directory(ies), if thez don't already exist
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{touch}] Update the access and modification times of each FILE to the current time.
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{mv}] moves or renames files/directories
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{cp}] copies files and directories 
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{rm}] removes files or directories
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{cat}] concatenate files and print on the standard output
+\begin{terminalcode}
+[kurs11@vasarely 02 documentation]$ cat 00\ cat\ this\ file\ for\ instructions 
+Ask the assistant for setting up the documentation for you.
+Then checkout the documentation template written in Latex from:
+
+http://bender.unibe.ch/svn/pi/students/YOUR_USER_NAME/
+\end{terminalcode}
+
+\item[\texttt{ssh}] OpenSSH SSH client (remote login program)
+\begin{terminalcode}
+
+[kurs11@vasarely 11 ssh]$ ssh anker.unibe.ch 
+The authenticity of host 'anker.unibe.ch (130.92.63.43)' can't be established.
+RSA key fingerprint is 23:0a:a6:55:86:0e:90:8b:61:49:fc:fc:5b:0b:b6:36.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'anker.unibe.ch,130.92.63.43' (RSA) to the list of known hosts.
+kurs11@anker.unibe.ch's password: 
+Permission denied, please try again.
+kurs11@anker.unibe.ch's password: 
+[kurs11@anker ~]$ ls
+Desktop  documentation  Documents  Download  lessons  Music  Pictures  Public  Templates  Videos
+
+\end{terminalcode}
+
+\item[\texttt{svn}] Subversion command-line client
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{grep}]opens VIMTutorial
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{less}] views the files "text- content"
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{wc}] prints newline, word, and byte counts for each file
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{du}] estimates file space usage
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{find}] search for files in a directory hierarchy
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{wget}]  The non-interactive network downloader
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{vimtutor}]opens VIMTutorial
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{vim filename}]opens a new VIMfile
+\begin{terminalcode}
+\end{terminalcode}
+
+
 
 \end{description}
+
+
+%===================================================================================
+\section{VIM}
+%============================================================================
+\subsection{Commands}
+\begin{description}
+
+\item[\texttt{:wq}] : save and quit
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{:q!}] : quits without saving
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{y,p}] : "copy and past"
+\begin{terminalcode}
+\end{terminalcode}
+
+\item[\texttt{:wq}] : save and quit
+\begin{terminalcode}
+\end{terminalcode}
+
+
+
+
+
+\end{description}
+
+
+
+
 
 %=============================================================================
 \section{Documentation with Latex}

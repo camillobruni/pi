@@ -34,10 +34,10 @@
 %=============================================================================
 
 \date{HS 2009 University Bern}
-\author{PUT YOUR NAME HERE}
-\title{Programming Introduction}
+\author{Tobias Brog}
+\title{Documentation}
 \begin{document}
-
+\maketitle
 %=============================================================================
 \section{Terminal}
 %=============================================================================
@@ -102,7 +102,6 @@ cami@bender:~/test$ ls -l
 emptyfile.txt
     \end{terminalcode}
 
-
 % add your own remarks here by reusing the existing examples
 
 \end{description}
@@ -110,6 +109,45 @@ emptyfile.txt
 %=============================================================================
 \section{Documentation with Latex}
 %=============================================================================
+
+
+
+\begin{itemize}
+
+\item \texttt{\bf to open a file in Vim put "vim" in front of the file's name.}
+\item \texttt{cd change directory options are -P and -L }
+\item \texttt{ls list all items in directory. Lists all files in parent directory when you: ls ..
+option -R lists subdirectories recursively }
+\item \texttt{wq! save and close (external command) }
+\item \texttt{w save}
+\item \texttt{.. parent folder . represents current folder}
+\item \texttt{\bf "make view" generates a .pdf file in Latex}
+\item \texttt{man displays the online manual pages for \bf name}
+\item \texttt{pwd print working directory. The options for pwd are --help and --version.}
+\item \texttt{rm Remove files or directories Problem:Could not remove directory Solution: use -r option use -f option to avoid prompting. Useful when removing files recursively}
+\item \texttt{mkdir Make direction.  Could not yet figure out how to create parent directories.}
+\item \texttt{touch Update the access and modification time to the current time. Use option -t to set time manually in 
+CCYYMMDD.ss format }.
+\item \texttt{mv Write like: mv SOURCE DIRECTORY useful option -u move only when source file is newer than destination file or when destination file is missing. With mv a file can be renamed if destination does not exist. }
+\item \texttt{cp write like mv command. Similar options to mv. Use -r as with rm. }
+\item \texttt{cat shows contents of file. Less does the same but on a page. Redirect standard output with > double it without deleting previous >>}
+\item \texttt{ssh log into a remote machine and execute commands there.Use ~. to disconnect.}
+\item \texttt{svn did not get that}
+\item \texttt{grep did not get that}
+\item \texttt{less could not do without previous example}
+\item \texttt{sort write sorted concatenation of all files to standard output. (Redirection possible too?}
+\item \texttt{wc Print newline, byte and word counts for each file}
+\item \texttt{du Summarize disk usage for each file. For directories recursively.}
+\item \texttt{find Search a given directory for the provided keyword: find WORD DIRECTORY}
+\item \texttt{wget Non interactive-download. Does not require the users presence all the time.}
+\item \texttt{pipes | send information from one program to another.} 
+
+
+
+
+\end{itemize}
+
+
 \subsection{Introduction} 
 
 In this section we explain some \LaTeX\xspace details and different formatting
@@ -122,7 +160,7 @@ the online recognition tool \texttt{detexify} at \url{http://detexify.kirelabs.o
 %=============================================================================
 \subsection{Common Commands}
 \subsubsection{Sectioning}
-Depening on the documentclass given in the very beginning of this file there
+Depending on the document class given in the very beginning of this file there
 exist several sectioning levels:
 \begin{enumerate}
 	\item{} \verb$\section{NAME}$
@@ -188,6 +226,7 @@ is added with a \verb$\item$ between the \texttt{begin} and \texttt{end}.
 %=============================================================================
 \section{Ruby Programming}
 %=============================================================================
+
 
 
 \end{document}

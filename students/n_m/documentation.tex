@@ -101,10 +101,47 @@ cami@bender:~/test$ ls -l
 ~/test$ ls
 emptyfile.txt
     \end{terminalcode}
+\begin{tabular}{lll}
+\verb$i$	& {\rm insert}\\
+\verb$a$ & {\rm insert after cursor}\\
+\verb$x$ & {\rm delete}\\
+\verb$dw$ & {\rm delete word}\\
+\verb$ce$ & {\rm delete word and change it}\\
+\verb$dd$ & {\rm delete line}\\
+\verb$e$ & {\rm end of next word}\\
+\verb$u$ & {\rm undo}\\
+\verb$v$ & {\rm highlight}\\
+\verb$ctrl+r$ & {\rm undo the undo}\\
+\verb$y$ & {\rm copy}\\
+\verb$p$ & {\rm paste}\\
+\verb$r$ & {\rm replace the character under the cursor}\\
+\verb$ctrl+g$ & {\rm Position}\\
+\verb$G$ & {\rm go to end}\\
+\verb$gg$ & {\rm go to top}\\
+\verb$xG$ & {\rm go to x line}\\
+\verb$:q$ & {\rm quit without save}\\
+\verb$:qw$ &{\rm quit vim and save}\\
+\verb$:w$ & {\rm save}\\
+\end{tabular}
 
+\item{ter}
+\begin{enumerate}
+\item{ter} sd
+\item dfr
+\end{enumerate}
 
-% add your own remarks here by reusing the existing examples
+\begin{tabular}{lll}
+\verb$pwd$ &{\rm print working directory}\\
+\verb$cd$ &{\rm change directory}\\
+\verb$cd ..$ &{change to preveous directory}\\
+\verb$ls$ &{\rm list directory contents}\\
+\verb$ctrl+c$ &{interrupt}\\
+\verb$man$ &{help}\\
+\verb$whatis$ &{help}\\
+\verb$make view$ & {\rm pdf}\\
+\end{tabular}
 
+ % add your own remarks here by reusing the existing examples\
 \end{description}
 
 %=============================================================================
@@ -135,7 +172,7 @@ exist several sectioning levels:
 the end of a line.
 
 \subsubsection{Schriftgrösse / -style}
-\begin{tabular}{lll}                                                          
+\begin{tabular}{lll} 
 \verb$\rm$			& {\rm A normaler text}\\ 
 \verb$\sl$ 			& {\sl An italic text}\\
 \verb$\bf$ 			& {\bf A bold text}\\
@@ -183,6 +220,89 @@ is added with a \verb$\item$ between the \texttt{begin} and \texttt{end}.
 		\end{enumerate}
 	\item Lc4 d6
 \end{enumerate}
+
+
+\subsubsection{Math, \LaTeX 's real strengths}
+A much longer introduction, although still called a short math guide, is 
+avaiable online at \url{ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf}.
+
+\begin{description}
+
+\item[Inline Mode]
+Equations with numeration with \verb$\begin{equation} FORMULA \end{equation}$:
+\begin{equation} 
+E_{kin} = \frac 1 2 m^2
+\end{equation}
+
+Equations without numeration with \verb$\begin{equation*} FORMULA \end{equation*}$:
+\begin{equation*} 
+E_{kin} = \frac 1 2 m^2
+\end{equation*}
+
+Shortcut using \verb$\[ FORMULA \]$:
+\[ -\frac{\hbar}{2m}\Delta\Phi(\vec r) + V(\vec r)\Phi(\vec r) = E\Phi(\vec r) \]
+
+Inline mode with \verb|$ FORMULA $| displays as 
+$\int_\infty^\infty |\psi(x)^2|\mathrm{dx} = 1$.
+
+\item[Parenthesis]
+\[ \Biggl( \biggl( \Bigl( \bigl( ( ) \bigr) \Bigr) \biggr) \Biggr) \]
+
+\item[Spaces]
+\begin{tabular}[t]{lll}
+Small spaces        & \verb$\_$     & $ y=x^{2} \_ y'=2x \_  y''=2 $ \\
+Middle sized spaces & \verb$\quad$  & $ y=x^{2} \quad y'=2x \quad  y''=2 $ \\
+Big spaces          & \verb$\qquad$ & $ y=x^{2} \qquad y'=2x \qquad  y''=2 $
+\end{tabular}
+
+\item[Indices and Powers]
+\[ a_i, x^{n+1} \qquad a_{ij} + b_{ij} = p_{ij} \qquad 
+    \text{\ldots and nested} \qquad
+    a_{x_ij} = n_{x^{2^b_n}} \]
+
+\item[Fractions]
+\[  \frac{Zaehler}{Nenner} \qquad 
+    \frac{a}{b} + \frac{c}{b} = \frac{ a+c}{b} \qquad
+    \frac{\frac{\frac{a}{b}}{c}}{d} \qquad
+    \frac {{n+1 \choose k/2}} {5!} \]
+
+\noindent In the simple math environment two FORMULAdifferent sized fractions can be 
+used; the small fractions $\frac{1}{2}$ or the normal sized $\dfrac{1}{x}$.
+
+\item[Roots]	
+\[  \sqrt[\text{root depth}]{\text{root term}} \qquad
+    \sqrt{x+y-z}, \sqrt[5]{4+x} \]
+
+\item[Functions]
+\[ f : \mathbb{N} \to \mathbb{R} \qquad f : x \mapsto x^2\]
+Mathematical functions are writtein explicitely written in normal text not
+math mode text:
+\[ \sin(x) = \text{sin}(x) \text{ {\bf and not }} sin(x)\]
+
+\item[Varia]
+\[ \left( \sqrt{\frac{A^C}{B_y}} +	 \sum_{i=1}^N a_i\right) \]
+\[ A \stackrel {\lambda_a} {\longrightarrow} B \]
+\[ \int \! \! \int z\,dx \, dy \quad \mbox {\bf not} \quad \int\int z dx dy \]
+\[ \int \! \! \int z\,dx \, dy \quad \mbox {\bf not} \quad \int\int z dx dy \]
+				
+{\Large
+\[ \Leftarrow \  \Leftrightarrow \  \Longleftrightarrow \  \Rightarrow \_ 
+    \Uparrow \  \Updownarrow \  \Downarrow	\]}
+				
+\[\bigcap \cap \sum \int_0^{2\pi} \vec{a} \dot{a} \ddot{a} a^{\prime \prime} \]
+
+
+\item[Matrices]
+\[ \det A = \| a_{ik} \| =
+\left| \begin{array}{ccccc}
+    a_{11} & a_{12} & a_{13} &  \cdots & a_{1n} \\
+    a_{21} & a_{22} & a_{23} &  \cdots & a_{2n} \\
+    \vdots  & \vdots  & \vdots  & \ddots & \vdots\\
+    a_{n1} & a_{n2} & a_{n3} &  \cdots & a_{nn} \\
+\end{array} \right| . \]
+
+\end{description}
+
 
 
 %=============================================================================

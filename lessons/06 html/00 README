@@ -1,0 +1,26 @@
+There are two possible solution to create an own website.
+The first one is from the Informatik Dienste (id.unibe.ch):
+    
+    http://www.id.unibe.ch/content/e5911/e6366/e6478/e6480
+
+And is not really recommendable if you have an iamexwi/pool account. There is a
+short info page at this strange page:
+    
+    http://www.iamexwi.unibe.ch/system/pool/
+
+So you see: you've another free email address with your pool account ;). Now
+this account can also be for hosting a website as well:
+    
+    http://www.iamexwi.unibe.ch/~USERNAME
+
+This will most probably just show an error page for your account. To get this
+problem fixed, create a directory named "public_html" in your home directory.
+If you now open the previous URL in your browser (there is "links" for the 
+command line) you can see an empty directory listed.
+
+Now copy the "index.html" file into your public_html. If you now open
+the URL again you'll see that magically another site pops up. So what happened?
+Usually if you request an URL the webserver will just display a list of 
+directories and files. But it first tries to server an index.html file if it
+exists. So whenever you put an index.html file into a directory it will be
+directly displayed if you open this directory with the browser.

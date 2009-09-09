@@ -203,6 +203,91 @@ is added with a \verb$\item$ between the \texttt{begin} and \texttt{end}.
 	\item Lc4 d6//
 \end{enumerate}
 
+\subsubsection{Math, \LaTeX 's real strengths}
+
+A much longer introduction, although still called a short math guide, is 
+avaiable online at \url{ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf}.
+
+\begin{description}
+
+\item[Inline Mode]
+Equations with numeration with \verb$\begin{equation} FORMULA \end{equation}$:
+\begin{equation} 
+E_{kin} = \frac 1 2 m^2
+\end{equation}
+
+Equations without numeration with \verb$\begin{equation*} FORMULA \end{equation*}$:
+\begin{equation*} 
+E_{kin} = \frac 1 2 m^2 \qquad
+F_ {kin} = \frac 3 2 m^4
+\end{equation*}
+
+Shortcut using \verb$\[ FORMULA \]$:
+\[ -\frac{\hbar}{2m}\Delta\Phi(\vec r) + V(\vec r)\Phi(\vec r) = E\Phi(\vec r) \]\\
+
+\[ -\frac{2h^2}{2m}\Lambda\beta(\vec r) + V(\vec r)\beta(\vec r) = E\beta(\vec r) \] \footnote{\dots\sl Formel stimmt nicht.}.\\
+Inline mode with \verb|$ FORMULA $| displays as 
+$\int_\infty^\infty |\psi(x)^2|\mathrm{dx} = 1$.
+
+\item[Parenthesis]
+\[ \Biggl( \biggl( \Bigl( \bigl( ( ) \bigr) \Bigr) \biggr) \Biggr) \]
+
+\item[Spaces]
+\begin{tabular}[t]{lll}
+Small spaces        & \verb$\_$     & $ y=x^{2} \_ y'=2x \_  y''=2 $ \\
+Middle sized spaces & \verb$\quad$  & $ y=x^{2} \quad y'=2x \quad  y''=2 $ \\
+Big spaces          & \verb$\qquad$ & $ y=x^{2} \qquad y'=2x \qquad  y''=2 $
+\end{tabular}
+
+\item[Indices and Powers]
+\[ a_i, x^{n+1} \qquad a_{ij} + b_{ij} = p_{ij} \qquad 
+    \text{\ldots and nested} \qquad
+    a_{x_ij} = n_{x^{2^b_n}} \]
+
+\item[Fractions]
+\[  \frac{Zaehler}{Nenner} \qquad 
+    \frac{a}{b} + \frac{c}{b} = \frac{ a+c}{b} \qquad
+    \frac{\frac{\frac{a}{b}}{c}}{d} \qquad
+    \frac {{n+1 \choose k/2}} {5!} \]
+
+\noindent In the simple math environment two FORMULAdifferent sized fractions can be 
+used; the small fractions $\frac{1}{2}$ or the normal sized $\dfrac{1}{x}$.
+
+\item[Roots]	
+\[  \sqrt[\text{root depth}]{\text{root term}} \qquad
+    \sqrt{x+y-z}, \sqrt[5]{4+x} \]
+\[  \sqrt{9x^2-5y}, \sqrt[6y]{3+x^2} \]	\qquad	
+
+
+\item[Functions]
+\[ f : \mathbb{N} \to \mathbb{R} \qquad f : x \mapsto x^2\]
+Mathematical functions are writtein explicitely written in normal text not
+math mode text:
+\[ \sin(x) = \text{sin}(x) \text{ {\bf and not }} sin(x)\]
+
+\item[Varia]
+\[ \left( \sqrt{\frac{A^C}{B_y}} +	 \sum_{i=1}^N a_i\right) \]
+\[ A \stackrel {\lambda_a} {\longrightarrow} B \]
+\[ \int \! \! \int z\,dx \, dy \quad \mbox {\bf not} \quad \int\int z dx dy \]
+\[ \int \! \! \int z\,dx \, dy \quad \mbox {\bf not} \quad \int\int z dx dy \]
+				
+{\Large
+\[ \Leftarrow \  \Leftrightarrow \  \Longleftrightarrow \  \Rightarrow \_ 
+    \Uparrow \  \Updownarrow \  \Downarrow	\]}
+				
+\[\bigcap \cap \sum \int_0^{2\pi} \vec{a} \dot{a} \ddot{a} a^{\prime \prime} \]
+
+
+\item[Matrices]
+\[ \det A = \| a_{ik} \| =
+\left| \begin{array}{ccccc}
+    a_{11} & a_{12} & a_{13} &  \cdots & a_{1n} \\
+    a_{21} & a_{22} & a_{23} &  \cdots & a_{2n} \\
+    \vdots  & \vdots  & \vdots  & \ddots & \vdots\\
+    a_{n1} & a_{n2} & a_{n3} &  \cdots & a_{nn} \\
+\end{array} \right| . \]
+
+\end{description}
 
 
 

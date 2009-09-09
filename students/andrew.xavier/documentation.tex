@@ -76,7 +76,7 @@
 
 % this sections sets the properties for the title of the document
 \date{HS 2009 University Bern}
-\author{PUT YOUR NAME HERE}
+\author{Andrew Xavier}
 \title{Programming Introduction}
 
 %=============================================================================
@@ -182,6 +182,132 @@ cami@bender:~/test$ ls -l
 emptyfile.txt
     \end{terminalcode}
 
+\subsubsection{man}
+\begin{terminalcode}
+For getting Help: man \ command
+\end{terminalcode}
+
+\subsubsection{cd}
+\begin{terminalcode}
+For switching between the folders
+Folder up: cd ..
+Into specific folder: cd "FOLDER"
+Home folder: cd ~
+\end{terminalcode}
+
+\subsubsection{ls}
+\begin{terminalcode}
+For getting the contents of a directory
+For showing the contents in a list: ls -l
+\end{terminalcode}
+
+\subsubsection{pwd}
+\begin{terminalcode}
+For knowing the whole current directory: pwd
+\end{terminalcode}
+
+\subsubsection{mkdir}
+\begin{terminalcode}
+For making directories: mkdir FOLDER  whit the name "FOLDER"
+\end{terminalcode}
+
+\subsubsection{touch}
+\begin{terminalcode}
+For updating the access and modification times of each FILE to the current time:
+For example: Change the FILE to 11. March at 11.23: touch -t 11031123 FILE
+\end{terminalcode}
+
+\subsubsection{mv}
+\begin{terminalcode}
+For moving or renaming a FILE:
+Move A in B: mv A B
+Rename A in C: mv A C
+Move C from B and Rename it in A: mv B/C A
+\end{terminalcode}
+
+\subsubsection{cp}
+\begin{terminalcode}
+Fo copying files and directories:
+Copy A in B: cp A B
+\end{terminalcode}
+
+\subsubsection{rm}
+\begin{terminalcode}
+For removing files and directories:
+Remove A and B: rm A B --> "y" <ENTER>
+\end{terminalcode}
+
+\subsubsection{cat}
+\begin{terminalcode}
+For open FILES: cat FILE
+\end{terminalcode}
+
+\subsubsection{ssh}
+\begin{terminalcode}
+For connecting with the remote login program
+Connect with anker.unibe.ch: ssh anker.unibe.ch
+For disconnecting: logout
+\end{terminalcode}
+
+\subsubsection{svn}
+\begin{terminalcode}
+For restoring subversions on the server: svn ci
+\end{terminalcode}
+
+\subsubsection{grep}
+\begin{terminalcode}
+For printing lines matching:
+Showing every line in the "FILE B", that contains "hello": grep hello "FILE B"
+Showing the amount of lines: grep hello "FILE B" -c
+Showing the linenumber in front of each matching line: grep hello "FILE B" -n
+Showing the amount of lines with no matching: grep hello "FILE B" -v -c
+Showing every line in the "FILE C", that contains "hello" and "world":
+grep -e hello -e world "FILE C"
+\end{terminalcode}
+
+\subsubsection{sort}
+\begin{terminalcode}
+For sorting lines:
+Into 1-9 A-Z: sort "FILE A"
+Into Z-A 9-1: sort -r "FILE A"
+\end{terminalcode}
+
+\subsubsection{wc}
+\begin{terminalcode}
+For printing lines, words and bytes of a "FILE A":
+For lines, words and bytes: wc "FILE A"
+For just lines and file name: wc -l "FILE A"
+\end{terminalcode}
+
+\subsubsection{du}
+\begin{terminalcode}
+For getting know the file space usage
+\end{terminalcode}
+
+\subsubsection{find}
+\begin{terminalcode}
+For searching a file
+\end{terminalcode}
+
+\subsubsection{wget}
+\begin{terminalcode}
+For downloading files from the web: wget http://www.unibe.ch
+\end{terminalcode}
+
+\subsubsection{clear}
+\begin{terminalcode}
+For clearing the display
+\end{terminalcode}
+
+\subsubsection{ping}
+\begin{terminalcode}
+For seeing if a host is online and responds
+\end{terminalcode}
+
+\subsubsection{whoami}
+\begin{terminalcode}
+For getting know the effective user id
+\end{terminalcode}
 
 % add your own remarks here by reusing the existing examples
 

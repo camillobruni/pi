@@ -12,6 +12,11 @@ If that file existed already it has a couple of lines specifying different
 variables which are used by bash.
 Now add the following line to the file, which sets the $SVN_EDITOR variable:
 
-export SVN_EDITOR=vim
+export SVN_EDITOR=/usr/bin/vim
 
-From now on svn will use vim to edit the commit messages.
+From now on svn will use vim to edit the commit messages. If it fails again
+make sure you do
+
+>> bash
+
+before committing.

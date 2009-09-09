@@ -155,6 +155,39 @@ $ find . -name "*bla*" -print
 	\end{terminalcode}
 This prints every file in the current working directory with the word "bla" in its name.
 
+\item[\texttt{grep}] searches for a string in a textfiie.
+	\begin{terminalcode}
+$ grep Hunde file.txt
+In diesem Text geht es um Hunde
+Hunde und Katzen also
+$ grep Katzen file.txt
+und Katzen
+Hunde und Katzen also
+$ grep Katzen file.txt | grep Hunde
+Hunde und Katzen also
+	\end{terminalcode}
+
+\item[pipes] pass results over to another command.
+	\begin{terminalcode}
+$ ls | less
+# This pipes the result of 'ls' to the command less
+# which displays it with the ability to scroll.
+
+$ grep dog file.txt | grep cat
+# This searchs the file 'file.txt' for any lines containing cat AND dog
+	\end{terminalcode}
+
+\item[redirects] write the result of a command in a file.
+	\begin{terminalcode}
+$ ls -GlF > file.txt
+# This writes the result of the 'ls' command in thh file 'file.txt'
+
+$ date >> file.txt
+# This appends the current date and time to the file 'file.txt'
+
+$ wget ?> file.txt
+# This writes only the raising warningns into the file.
+	\end{terminalcode}
 \end{description}
 
 %=============================================================================

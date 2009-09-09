@@ -669,6 +669,20 @@ irb(main):012:1> end
     \begin{terminalcode}
     \end{terminalcode}
 
+\item[\bf{+ = *}] :):):):):)
+    \begin{terminalcode}
+irb(main):002:0> 1.class
+=> Fixnum
+irb(main):003:0> class Fixnum
+irb(main):004:1> def +(n)
+irb(main):005:2> self*n
+irb(main):006:2> end
+irb(main):007:1> end
+=> nil
+irb(main):008:0> 2+3
+=> 6
+    \end{terminalcode}
+
 \end{description} 
 
 \end{document}

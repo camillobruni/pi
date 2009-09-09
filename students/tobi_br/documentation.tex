@@ -133,8 +133,8 @@ CCYYMMDD.ss format }.
 \item \texttt{"cat" shows contents of file. Less does the same but on a page. Redirect standard output with > double it without deleting previous >>}
 \item \texttt{"ssh" log into a remote machine and execute commands there.Use ~. to disconnect.}
 \item \texttt{"svn" Works with a data bin on a server.svn update (up)  - svn commit (ci) uploads changes to repository - svn checkout (co ) gets files from repository - svn stat gets versions svn log gets log entries for designated file}
-\item \texttt{"grep" did not get that}
-\item \texttt{"less" could not do without previous example}
+\item \texttt{"grep" Searches for a PATTERN in given FILES. "grep PATTERN FILE" Prints the matching line With option -v it is possible to invert the sense of matching printing only non matching lines.}
+\item \texttt{"less" Displays output on a page. /PATTERN searches and highlights matching patterns. With n and N it is possible to go from one match to the other.}
 \item \texttt{"sort" write sorted concatenation of all files to standard output. (Redirection possible too?)}
 \item \texttt{"wc" Print newline, byte and word counts for each file}
 \item \texttt{"du" Summarize disk usage for each file. For directories recursively.}
@@ -144,7 +144,7 @@ CCYYMMDD.ss format }.
 \item \texttt{ ";" seperates two commands in a line. With && between one command and the other the following command gets executed only if command 1 was successful.}
 \item \texttt{"svn" update  - svn commit uploads changes to repository - svn checkout gets files from repository - svn stats gets versions}
 
-
+\item \texttt{For svn ci to work you need to set the log editor: "export SVN_EDITOR=/usr/bin/vim}
 \end{itemize}
 
 

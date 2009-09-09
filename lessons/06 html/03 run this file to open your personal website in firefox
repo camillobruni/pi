@@ -1,0 +1,3 @@
+#!/bin/bash
+
+firefox http://www.iamexwi.unibe.ch/~`whoami`

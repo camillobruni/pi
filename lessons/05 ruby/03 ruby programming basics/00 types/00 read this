@@ -6,3 +6,7 @@
  To see what type a String has type the following for any String:
 
  >> "foo".class
+
+To see from which type a String inherits
+
+>> "foo".class.ancestors

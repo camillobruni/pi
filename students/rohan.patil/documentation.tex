@@ -177,7 +177,7 @@ the end of a line.
 \end{tabular}
 
 \subsubsection%\textcolor{blue}%{Notes}
-To create a footnote use the \verb$\footnote{YOUR NOTE}$ 
+To create a footnote use the \verb$\footnote{Blabla}$ 
 command\footnote{\dots as you can see here.}. \\
 If you want to put a remark at side of a page use \verb$\marginpar$.
 \marginpar{This is a note at the border of the page.}
@@ -231,7 +231,7 @@ $\int_\infty^\infty |\psi(x)^2|\mathrm{dx} = 1$.
 
 \item[Parenthesis]
 \[ \Biggl( \biggl( \Bigl( \bigl( ( ) \bigr) \Bigr) \biggr) \Biggr) \]
-
+\[ \bigl( \Bigl( \biggl( \Biggl( ( ) \Biggr) \biggr) \Bigr) \bigr) \]
 \item[Spaces]
 \begin{tabular}[t]{lll}
 Small spaces        & \verb$\_$     & $ y=x^{2} \_ y'=2x \_  y''=2 $ \\
@@ -293,7 +293,61 @@ math mode text:
 
 %=============================================================================
 \section{Ruby Programming}
-%=============================================================================
+%============================================================================Ruby zu starten muss man "irb" eingeben. 
+
+Alle Informationen zu Ruby findet man auf der folgenden Webseite:\\
+
+{\center http://www.ruby-lang.org/en/documentation/quickstart/}
+
+\noindent Eine weitere hilfreiche Webseite zu Ruby ist\\
+
+http://pine.fm/LearnToProgram\\
+
+\noindent Das Ruby kann man ganz einfach als Rechner. Z.B : 3+2 oder 3**2 ( 3 hoch 2). Umweitere, kompexere Mathaufgaben loesen zu koennen, muss man"Math." eingeben. z.B "Math.sqrt". Dazu gehoert auch "sin()" und "tan()".
+
+\noindent Mit ``def'' kann man einem Buchstaben(z.b def h) eine Definition zu geben. 
+mit puts wird aufgeschrieben wof[r das h definiert werden soll (z.b Hello World)
+um diese Definitionsgeschichte zu beenden schreibt man "end"
+
+\begin{verbatim}
+def h
+puts "hello world"
+end
+\end{verbatim}
+
+
+\noindent Mit \#\{name\} ist es moeglich, etwas an dieser Stelle, in den String einzubauen.
+
+\begin{verbatim}
+def h {name}
+puts ``Hello\ #{name\} !''
+end
+=> nil
+h(``Matz``)
+Hello Matz!
+=>nil
+\end{verbatim} 
+
+\noindent Mit dem Befehl ``class'' definiert man eine Klasse namens `` Greeter'' oder ``Megagreter'' und noch weitere andere.
+
+
+\noindent Das ``@name'' dient dazu mehrer verschiedene Namen, die man vor dem Gebrauch mit ``name='' definiert. es ist von Vorteil dies so zu gebrauchen, da man bei einerAenderung des Namens, bei allen unterstehenden Befehlen aendern muesste.  
+
+\noindent Mit ``g.'' wird der Name gespeichert und der befehl kann ausgefuert werden
+
+\begin{verbatim}
+g = Greeter.new(``Pat'')
+ =>\#< Greeter:0x16cac @name=``Pat''>
+g.say_hi (Befehl)
+hi Pat!
+=> Nil
+
+g.say_bye
+Bye Pat, come back soon.
+=>nil
+\end{verbatim}
+
+
 
 
 \end{document}

@@ -299,14 +299,43 @@ For downloading files from the web: wget http://www.unibe.ch
 For clearing the display
 \end{terminalcode}
 
+\subsubsection{kill}
+\begin{terminalcode}
+For killing all running processes with a given name
+\end{terminalcode}
+
+\subsubsection{passwd}
+\begin{terminalcode}
+For changing the accounts password
+\end{terminalcode}
+
 \subsubsection{ping}
 \begin{terminalcode}
 For seeing if a host is online and responds
 \end{terminalcode}
 
+\subsubsection{tar}
+\begin{terminalcode}
+For un-/compressing a file
+\end{terminalcode}
+
+\subsubsection{which}
+\begin{terminalcode}
+For locating a program file in the user's path
+\end{terminalcode}
+
 \subsubsection{whoami}
 \begin{terminalcode}
 For getting know the effective user id
+\end{terminalcode}
+
+\subsubsection{execute more commands}
+\begin{terminalcode}
+We can execute more commands in one line by adding ; between the commands
+For example: wget unibe.ch; less index.html
+By writing & instead of ; both commands will run parallel
+By writing && instead of ; the second command will only be executed if the first one is successfully finished
+By writing || instead of ; the second command will be executed, even if the first fails
 \end{terminalcode}
 
 % add your own remarks here by reusing the existing examples

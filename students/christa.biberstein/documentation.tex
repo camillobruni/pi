@@ -169,7 +169,50 @@ svn co http://bender.unibe.ch/svn/pi/lessons
 
 \item[\bf{svn up}] svn update
 
-\item[\bf{svn ci}] svn commit
+\item[\bf{svn ci}] svn commit -m 'CHANGES'
+    \begin{terminalcode}
+[biberstein@kollwitz documentation]$ svn commit -m ''
+Sending        documentation.tex
+Transmitting file data .
+Committed revision 84.
+    \end{terminalcode}
+
+\item[\bf{svn log}] shows older versions
+    \begin{terminalcode}
+[biberstein@kollwitz documentation]$ svn log
+------------------------------------------------------------------------
+r54 | (no author) | 2009-09-08 15:06:14 +0200 (Tue, 08 Sep 2009) | 2 lines
+
+uhh
+
+------------------------------------------------------------------------
+r53 | (no author) | 2009-09-08 15:05:14 +0200 (Tue, 08 Sep 2009) | 2 lines
+
+Added bla, modified my beautiful documentation :)
+
+------------------------------------------------------------------------
+r17 | cami | 2009-09-07 09:31:13 +0200 (Mon, 07 Sep 2009) | 2 lines
+
+adding latex docs for the students
+
+------------------------------------------------------------------------
+r16 | cami | 2009-09-07 00:50:06 +0200 (Mon, 07 Sep 2009) | 2 lines
+
+added students folders
+
+    \end{terminalcode}
+
+\item[\bf{svn cat -VERSION}] shows a specific version
+    \begin{terminalcode}
+[biberstein@kollwitz documentation]$ svn cat -r 53 documentation.tex
+\documentclass[10pt,a4paper]{scrartcl}
+    \end{terminalcode}
+
+\item[\bf{svn diff -VERSION}] shows only the difference between s specific version and the newest version
+    \begin{terminalcode}
+[biberstein@kollwitz documentation]$ svn diff -r 53 documentation.tex
+Index: documentation.tex
+    \end{terminalcode}
 
 \item[\bf{svn st}] svn status
 

@@ -111,14 +111,6 @@ cami@bender:~/test$ ls -l
 emptyfile.txt
     \end{terminalcode}
 
-\item[\texttt{ls}]shows directories 
-
-   	\begin{terminalcode}
-[kurs11@vasarely ~]$ ls
-Desktop  documentation  Documents  Download  lessons  Music  Pictures  Public  Templates  Videos
-
-   \end{terminalcode}
-
 \item[\texttt{man}] gets help for all the other commands
 \begin{terminalcode}
 \end{terminalcode}
@@ -137,39 +129,51 @@ Desktop  documentation  Documents  Download  lessons  Music  Pictures  Public  T
 
 \item[\texttt{ls}] lists directory content
 \begin{terminalcode}
+[kurs11@vasarely ~]$ ls
+Desktop  documentation  Documents  Download  lessons  Music  Pictures  Public  Templates  Videos
+
 \end{terminalcode}
 
 \item[\texttt{pwd}] prints current working directory
 \begin{terminalcode}
+[hiltpold@vasarely documentation]$ pwd
+/home/hiltpold/Documents/documentation
 \end{terminalcode}
 
-\item[\texttt{mkdir}] makes directory(ies), if thez don't already exist
+\item[\texttt{mkdir}] makes directory(ies), if they don't already exist
 \begin{terminalcode}
+mkdir a | new directory 
 \end{terminalcode}
 
-\item[\texttt{touch}] Update the access and modification times of each FILE to the current time.
+\item[\texttt{touch}] updates the access and modification times of each FILE to the current time.
 \begin{terminalcode}
 \end{terminalcode}
 
 \item[\texttt{mv}] moves or renames files/directories
 \begin{terminalcode}
+mv a b | moves a into b
+mv a c | renames a 
+mv a .. | puts a out of b  
 \end{terminalcode}
 
 \item[\texttt{cp}] copies files and directories 
 \begin{terminalcode}
+cp a b | copies a in b 
 \end{terminalcode}
 
 \item[\texttt{rm}] removes files or directories
 \begin{terminalcode}
+rm a | removes a 
 \end{terminalcode}
 
 \item[\texttt{cat}] concatenate files and print on the standard output
 \begin{terminalcode}
-[kurs11@vasarely 02 documentation]$ cat 00\ cat\ this\ file\ for\ instructions 
-Ask the assistant for setting up the documentation for you.
-Then checkout the documentation template written in Latex from:
+[kurs11@vasarely 02 documentation]$
+cat 00\ cat\ this\ file\ for\ instructions 
 
-http://bender.unibe.ch/svn/pi/students/YOUR_USER_NAME/
+cat 00\ cat\ this\ file\ for\ instructions displays the content of 00\ cat\ this\ file\ for\ instructions
+cat -n  cat 00\ cat\ this\ file\ for\ instructions displays the content  with all line numbers
+
 \end{terminalcode}
 
 \item[\texttt{ssh}] OpenSSH SSH client (remote login program)
@@ -191,30 +195,54 @@ Desktop  documentation  Documents  Download  lessons  Music  Pictures  Public  T
 
 \item[\texttt{svn}] Subversion command-line client
 \begin{terminalcode}
+svn checkout
+svn update
+svn status
+svn commit
 \end{terminalcode}
 
-\item[\texttt{grep}]opens VIMTutorial
+\item[\texttt{grep}] prints lines matching a pattern
 \begin{terminalcode}
+[hiltpold@vasarely 04 terminal extension]$ grep is grep.txt 
+   This manual is for version 2.5.4 of GNU Grep.
+   This manual is for `grep', a pattern matching engine.
+     Permission is granted to copy, distribute and/or modify this
+
 \end{terminalcode}
 
-\item[\texttt{less}] views the files "text- content"
+\item[\texttt{less} prints the files "text-content"
 \begin{terminalcode}
 \end{terminalcode}
 
 \item[\texttt{wc}] prints newline, word, and byte counts for each file
 \begin{terminalcode}
+wc a prints lines, words, bytes of a
+wc -l A prints only lines and file name A
+
 \end{terminalcode}
 
 \item[\texttt{du}] estimates file space usage
 \begin{terminalcode}
 \end{terminalcode}
 
-\item[\texttt{find}] search for files in a directory hierarchy
+\item[\texttt{find}] searchs for files in a directory hierarchy
 \begin{terminalcode}
 \end{terminalcode}
 
-\item[\texttt{wget}]  The non-interactive network downloader
+\item[\texttt{wget}]downloads files from the web
 \begin{terminalcode}
+[hiltpold@vasarely ~]$ wget http://bender.unibe.ch
+--2009-09-09 09:49:36--  http://bender.unibe.ch/
+Resolving proxy.unibe.ch... 130.92.253.200
+Connecting to proxy.unibe.ch|130.92.253.200|:80... connected.
+Proxy request sent, awaiting response... 200 OK
+Length: 538 [text/html]
+Saving to: `index.html'
+
+100[=================================================================================================>] 538         --.-K/s   in 0s      
+
+2009-09-09 09:49:36 (36.7 MB/s) - `index.html' saved [538/538]
+
 \end{terminalcode}
 
 \item[\texttt{vimtutor}]opens VIMTutorial

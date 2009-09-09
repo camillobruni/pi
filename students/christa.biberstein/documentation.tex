@@ -112,6 +112,22 @@ documentation.aux  documentation.log  documentation.out  documentation.pdf  docu
 kurs16
     \end{terminalcode}
 
+\item[\bf{mkdir NAME}] make a directory
+    \begin{terminalcode}
+[biberstein@kollwitz ~/Documents]$ mkdir pi
+[biberstein@kollwitz ~/Documents]$ ls
+documentation  lessons  pi
+    \end{terminalcode}
+
+\item[\bf{mv}] move files
+    \begin{terminalcode}    
+    [biberstein@kollwitz ~/Documents]$ ls
+documentation  pi
+[biberstein@kollwitz ~/Documents]$ mv documentation pi
+[biberstein@kollwitz ~/Documents]$ ls
+pi
+    \end{terminalcode}
+
 \item[\bf{Ctrl-C}] if the command is frozen kill it by typing Ctrl-C.
 
 \item[\bf{ls -GlF}] list the contents with more information 
@@ -144,7 +160,18 @@ also "man COMMAND", "info COMMAND", "help COMMAND", "COMMAND --help"
 Now you can scroll with the arrow keys up and down. Again use "q" to exit.
     \end{terminalcode}
 
-\item[\bf{svn up}] update changes
+\item[\bf{svn}] Subversion command line client tool
+
+\item[\bf{svn co}] svn checkout
+    \begin{terminalcode}
+svn co http://bender.unibe.ch/svn/pi/lessons
+    \end{terminalcode}
+
+\item[\bf{svn up}] svn update
+
+\item[\bf{svn ci}] svn commit
+
+\item[\bf{svn st}] svn status
 
 \item[\bf{rm}]
     \begin{terminalcode}
@@ -171,6 +198,8 @@ cami@bender:~/test$ ls -l
 ~/test$ ls
 emptyfile.txt
     \end{terminalcode}
+
+
 
 
 

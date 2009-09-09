@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- This is a comment -->
+<!-- Each HTML element starts is either a single tag like <br/> -->
+<!-- or a pair with an opening tag <head> and a closing tag </head> -->
+<head>
+
+<!-- * This is what is shown in the browser's window title-->
+    <title>Sir Bender Bending Rodríguez</title>
+
+<!-- Meta Tags describe the content of this file-->
+<!-- Here we specify that the text encoding of the document is in UTF 8 -->
+<!-- Rember to set UTF8 as the default in every text editor you have -->
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+<!-- * This tag here is for the search engine's spiders -->
+    <meta name="robots" content="index, follow" />
+<!-- These meta tags describe in more detail the content of the file -->
+<!-- To get a good page ranking in a search engine you have to precise here -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+<!-- Favicon is the little icon shown in the browser's address bar -->
+<!-- The favicon is an image of type .ico to generate such an image we-->
+<!-- suggest using an online service like http://www.favicon-generator.de/ -->
+<!-- You have to put the URL of the .ico in the href attribute -->
+    <link rel="shortcut icon" href="" />
+
+<!-- CSS are used to define the styling of the html elements in an external -->
+<!-- file. Here again put the file's url in the href tag -->
+<!-- * The first stylesheet is for normal usage "screen" -->
+    <link rel="stylesheet" href="" media="screen,projection" type="text/css" />
+<!-- * The second external stylesheet would only be used when printing -->
+    <link rel="stylesheet" href="" media="print" type="text/css" />
+<!-- * It is also possible to directly write the styl rules in this file -->
+    <style type="text/css">
+    /* within the two style-tags comments are done this way */
+
+    /* Here we set the body's background image 
+       So each css consists of a selector (here its body) which selects the
+       html elements from this documents. Here we just use a simple selection
+       based on the tagname.
+    */
+    body {
+        /* Each CSS rule has a list of styling properties.
+           A rather complete list is available at 
+           http://www.w3schools.com/CSS/CSS_reference.asp
+        */  
+        background-image: url(http://bender.unibe.ch/bender2.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        /* set the text color for globally to white
+        color: white;
+
+        color: white;
+
+        color: white;
+*/
+        color: white;
+    }
+    /* set the style for all h1 elements */
+    h1 {        
+        font-family: Georgia;
+        font-size: 60px;
+        text-align: right;
+        /* Setting the margin on the right side.
+           Note that you can use several different length units.
+           First the relative lengths:
+             * em (ems, the height of the element's font)
+             * ex (x-height, the height of the letter "x")
+             * px (pixels, relative to the canvas resolution)
+           The the absolut units:
+             * in (inches; 1in=2.54cm)
+             * cm (centimeters; 1<a href="http://en.wikipedia.org/wiki/cm=10mm)
+             * mm (millimeters)
+             * pt (points; 1pt=1/72in)
+             * pc (picas; 1pc=12pt)
+            
+        */
+        margin-right: 3.1415926535em
+    }
+
+    /* set the link colors */
+    a {
+        color: white;
+    }
+    a:hover {
+        border-bottom: 10px white dashed;
+    }
+
+    /* it's possible to set a style class */
+    .metalListStyleClass {
+        font-size: 50px;
+        list-style-type: square;
+        list-style-image: url(http://www.id.unibe.ch/resources/dienstleistungen.jpg);
+        margin-left: 150px;
+    }
+
+    /* Here we match any li thats in a elemnt with the style class 
+       .metalListStyleClass
+       A more complete reference on how to select elements with CSS is here:
+       http://www.w3.org/TR/CSS2/selector.html
+    */
+    .metalListStyleClass li {       
+        padding: 5px;
+        /* background-color: #AAA; */
+    }
+    li > a {
+        background-color: #000;
+    }
+    </style>
+
+<!-- JavaScript is a simple scripting language allowing you to dynamically -->
+<!-- change the page from within the browser -->
+<!-- * This tag allows you to include an external script -->
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<!-- * You can also use the script to directly code javascript in this file -->
+    <script type="text/javascript">
+        // now this is javascript code here so comments look a bit different
+        // dynamically load the jquery package
+        // see http://jquery.com/ for more information
+        google.load("jquery", "1.3.2");
+        google.load("jqueryui", "1.7.2");
+        function initialize() {
+            // make our list sortable by using some javsscript magic :)
+            $("#metalList").sortable({ cursor: 'crosshair',
+                                       opacity: 0.6,
+                                       revert: true,
+                                       grid: [50, 20]});
+        }
+        google.setOnLoadCallback(initialize);
+    </script>
+
+</head>
+<body>
+
+<!-- heading, the biggest one is h1, then h2 and so forth untill h6 -->
+<!-- It is also possible to directly format text certain tags -->
+<h1><tt>Bite</tt> <del>my</del> <i>shiny</i> <u>metal</u> <b>ass</b>!</h1>
+
+<!-- begin an unordered list (ul) -->
+<ul id="metalList" class="metalListStyleClass">
+    <li>
+        <tt>30%</tt> 
+        <a href="http://en.wikipedia.org/wiki/Iron">iron</a>
+    </li>
+    <li>
+        <tt>40%</tt> 
+        <a href="http://en.wikipedia.org/wiki/Titanium">titanium</a>
+    </li>
+    <li>
+        <tt>40%</tt> 
+        <a href="http://en.wikipedia.org/wiki/Lead">lead</a>
+    </li>
+    <li>
+        <tt>40%</tt> 
+        <a href="http://en.wikipedia.org/wiki/Zinc">zinc</a>
+    </li>
+    <li>
+        <tt>40%</tt> 
+        <a href="http://en.wikipedia.org/wiki/Dolomite">Dolomite</a>
+    </li>
+</ul>
+
+</body>
+</html>
+
+
+

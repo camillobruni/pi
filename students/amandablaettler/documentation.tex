@@ -76,7 +76,7 @@
 
 % this sections sets the properties for the title of the document
 \date{HS 2009 University Bern}
-\author{PUT YOUR NAME HERE}
+\author{Aamanda Blaettler}
 \title{Programming Introduction}
 
 %=============================================================================
@@ -163,7 +163,7 @@ cami@bender:~/test$ ls
 (to delete directories you have to add -r)
     \end{terminalcode}
 % the code block ended with the previous line
-
+\newpage
 % again anothe item followed by some descriptive text
 \item[\texttt{touch}] updates the access and modification times of each FILE to 
     the current time.
@@ -210,14 +210,13 @@ a
     \begin{terminalcode}
 [kurs05@manet Documents] ls
 a b 
-[kurs05@manet Documents] rename a c a 
-                                from
-                                  to
-                                    file
+[kurs05@manet Documents] rename a c a  (rename FROM TO FILE) 
+
 [kurs05@manet Documents] ls
 b c
 (If a filename already exists it will overwright it but only if it is empty)
     \end{terminalcode}
+\newpage
 \item[\texttt{cp}] copy a file and name it with a new name
     \begin{terminalcode}
 [kurs05@manet Documents] ls
@@ -227,33 +226,43 @@ a
 a b  
     \end{terminalcode}
 
-\item[\texttt{cat}] give the text out
-\item[\texttt{cat-n}] number all output lines
-
+\subsubsection{More Commands}
+    \begin{tabular}{lll}
+\verb$cat$      &  {give the text out}\\
+\verb$cat-n$    &  {number all output lines}\\
+\verb$clear$    &  {clear the display}\\
+\verb$head$     &  {display first lines of a file}\\
+\verb$kill$     &  {kill all running processes with a given file}\\
+\verb$passwd$   &  {change your accounts password}\\
+\verb$ping$     &  {see if a host is online and responds}\\
+\verb$tail$     &  {displaz the last part of a file, mostly used for logs}\\
+\verb$tar$      &  {used for un- and compressing a file}\\
+\verb$tee$      &  {pipe fitting}\\
+\verb$top$      &  {displaz and update sorted information about processes}\\
+\verb$whoami$   &  {displaz effective user id}\\
+    \end{tabular}
+\subsection{SVN}
+\subsubsection{commands}
     \begin{terminalcode}
-IMPORTENT COMMENTS
-clear  -> clear the displaz
-head   -> display first lines of a file
-kill   -> kill all running processes with a given file
-passwd -> change your accounts password
-ping   -> see if a host is online and responds
-tail   -> displaz the last part of a file, mostly used for logs
-tar    -> used for un- and compressing a file
-tee    -> pipe fitting
-top    -> displaz and update sorted information about processes
-whoami -> displaz effective user id
-
-SVN
 svn update up (update the file on the computer)
 svn commit ci (update the file on the server)
 svn checkout co (takes the file)
-svn --help checkout (shows the help for this order)
+svn --help checkout (shows the help for checkout)
     \end{terminalcode}
+
+\subsubsection{How to download the files from the svn-server}
+    \begin{enumerate}
+\item{} \verb$ search the files in the internet$
+\item{} \verb$ copy the internetaddress$
+\item{} \verb$ go back to the Terminal$
+\item{} \verb$ write there: svn co INTERNETADDRESS (Enter)$
+    \end{enumerate}
+
 % add your own remarks here by reusing the existing examples
 
 % ending a description list
 \end{description}
-
+\newpage
 
 %=============================================================================
 % starting a new section
@@ -278,7 +287,7 @@ exist several sectioning levels:
 \begin{enumerate}
 \item{} \verb$\section{NAME}$
 \item{} \verb$\subsection{NAME}$
-\item{} \verb$\subsubsection{NAME}$
+\item{} \verb$\subsection{NAME}$
 \item{} \verb$\paragraph{NAME}$
 \end{enumerate}
 

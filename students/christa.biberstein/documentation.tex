@@ -199,7 +199,43 @@ adding latex docs for the students
 r16 | cami | 2009-09-07 00:50:06 +0200 (Mon, 07 Sep 2009) | 2 lines
 
 added students folders
+    \end{terminalcode}
 
+\item[\bf{svn log DOCUMENT}] shows older versions of a specific document
+    \begin{terminalcode}
+[biberstein@kollwitz documentation]$ svn log documentation.tex
+------------------------------------------------------------------------
+r88 | (no author) | 2009-09-09 09:54:02 +0200 (Wed, 09 Sep 2009) | 1 line
+
+Svn-Commands
+------------------------------------------------------------------------
+r84 | (no author) | 2009-09-09 09:35:17 +0200 (Wed, 09 Sep 2009) | 1 line
+
+
+------------------------------------------------------------------------
+r54 | (no author) | 2009-09-08 15:06:14 +0200 (Tue, 08 Sep 2009) | 2 lines
+
+uhh
+
+------------------------------------------------------------------------
+r53 | (no author) | 2009-09-08 15:05:14 +0200 (Tue, 08 Sep 2009) | 2 lines
+
+Added bla, modified my beautiful documentation :)
+
+------------------------------------------------------------------------
+r17 | cami | 2009-09-07 09:31:13 +0200 (Mon, 07 Sep 2009) | 2 lines
+
+adding latex docs for the students
+    \end{terminalcode} 
+
+\item[\bf{svn log --limit X Document}] shows the X newest versions of a specific document
+    \begin{terminalcode}
+[biberstein@kollwitz documentation]$ svn log --limit 1 documentation.tex
+------------------------------------------------------------------------
+r88 | (no author) | 2009-09-09 09:54:02 +0200 (Wed, 09 Sep 2009) | 1 line
+
+Svn-Commands
+------------------------------------------------------------------------
     \end{terminalcode}
 
 \item[\bf{svn cat -VERSION}] shows a specific version

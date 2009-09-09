@@ -1,3 +1,4 @@
 #!/bin/bash
 
-firefox http://www.iamexwi.unibe.ch/~`whoami`
+firefox http://www.iamexwi.unibe.ch/~`whoami` || \
+open http://www.iamexwi.unibe.ch/~`whoami` 

@@ -9,9 +9,11 @@ only with files as output.
 There exists another operator, the double greater than ">>" appends to the
 given output file:
 
->> echo 1 >> out.txt
->> echo 2 >> out.txt
+>> echo "eins" >> out.txt
+>> echo "zwei" >> out.txt
 >> cat out.txt
+eins
+zwei
 
 The output file "out.txt" will now contain two lines:
 
@@ -21,22 +23,23 @@ The output file "out.txt" will now contain two lines:
 Whereas, if I would have used only the single greater than ">" the file would
 be overwritten each time and not appended:
 
->> echo 1 > out.txt
->> echo 2 > out.txt
+>> echo "eins" > out.txt
+>> echo "zwei" > out.txt
 >> cat out.txt
-2
+zwei
 
 Another trick to make a command run silently is to /dev/null:
 
 >> cat grep.txt > /dev/null
 
 /dev/null is a special file/device that discards all data given to it.
-
-
-
+If you 'ls' in /dev you well see a lot of these special files, if you're a 
+beginner we suggest to always read first about such a special device before
+starting to write to or read from them.
 
 There exist other operators:
 
     ">"     redirect to a file
     ">>"    redirect to a file by appending
-    "2>"    redirect the warnings to a file
+    "2>"    redirect the warnings (stderr) to a file
+    "&>"    redirect both, the standard output (stdout) and the warnings

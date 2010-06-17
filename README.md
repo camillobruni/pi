@@ -42,7 +42,7 @@ All the course material is available on [github](http://github.com/dh83/pi).
    single file/folder name whose name starts with the letters you typed
    previously:
 
-        less 00\ terminal\ introduction.txt 
+        less 00_terminal_introduction.txt 
 
 5. Follow the instructions given in the file, if something is unclear use the
    manpages (for instance `man less` to get help about the `less` command),

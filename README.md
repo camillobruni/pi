@@ -20,13 +20,13 @@ All the course material is available on [github](http://github.com/dh83/pi).
 
 2. Load the course material from github using [git](http://git-scm.com/).
 
-    git clone git://github.com/dh83/pi.git
+        git clone git://github.com/dh83/pi.git
 
    If this should fail you have to blame most probably the university's proxy.
    In order to make this work properly you have to manually set the proxy in
    the current shell:
 
-    export http_proxy=http://proxy.unibe.ch:80/
+        export http_proxy=http://proxy.unibe.ch:80/
 
  3.
 

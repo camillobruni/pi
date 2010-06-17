@@ -6,7 +6,6 @@ University of Berne. This course should give you an overview of how to use the
 terminal, write simple bash scripts, create professional scientific documents
 using latex and get the basics of programming in ruby.
 
-
 Start
 -----
 All the course material is available on [github](http://github.com/dh83/pi).
@@ -28,15 +27,32 @@ All the course material is available on [github](http://github.com/dh83/pi).
 
         export http_proxy=http://proxy.unibe.ch:80/
 
- 3.
+3. This will create a folder name `pi`, type the following into your current
+   shell to change `cd` into the freshly loaded folder and list its contents
+   `ls`:
 
+        ls
+        cd pi
+        ls
 
+4. Now start by reading the first file in this directory. In order to read a
+   text file we use the command `less`. And note that you do not have to type
+   the full name of the file (here '00\ terminal\ introduction.txt'), it is
+   simply enough to type '00' and the the tab key. You will get a list or a
+   single file/folder name whose name starts with the letters you typed
+   previously:
 
+        less 00\ terminal\ introduction.txt 
+
+5. Follow the instructions given in the file, if something is unclear use the
+   manpages (for instance `man less` to get help about the `less` command),
+   use the internet or ask the mentors.
+   
 Copyrights
 ----------
 
-The course material is licensed under Creative Commons Attribution ShareAlike
-3.0.
+The course material is licensed under [Creative Commons Attribution ShareAlike
+3.0](http://creativecommons.org/licenses/by-sa/3.0/).
 
 You are free:
 

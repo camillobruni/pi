@@ -2,9 +2,10 @@ Programming Introduction Course
 ===============================
 
 Welcome to the introductory course for new computer scientist students at the
-University of Berne. This course should give you an overview of how to use the
-terminal, write simple bash scripts, create professional scientific documents
-using latex and get the basics of programming in ruby.
+[University of Berne](http://www.unibe.ch/eng/). This course should give you 
+an overview of how to use the terminal, write simple bash scripts, create 
+professional scientific documents using [latex](http://www.latex-project.org/) 
+and get the basics of programming in [ruby](http://www.ruby-lang.org/en/).
 
 Start
 -----

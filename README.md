@@ -28,11 +28,11 @@ All the course material is available on [github](http://github.com/dh83/pi).
         export http_proxy=http://proxy.unibe.ch:80/
 
 3. This will create a folder name `pi`, type the following into your current
-   shell to change `cd` into the freshly loaded folder and list its contents
-   `ls`:
+   shell to change (`cd`) into the freshly loaded folder (`pi.git`) and list 
+   its contents with the command `ls`:
 
         ls
-        cd pi
+        cd pi.git
         ls
 
 4. Now start by reading the first file in this directory. In order to read a

@@ -12,44 +12,52 @@ Start
 -----
 All the course material is available on [github](http://github.com/dh83/pi).
 
-1. Make sure you have access to a decent unix machine (OS X is partially ok)
-   with a decent terminal ([iTerm](http://iterm.sourceforge.net/) under OS X
-   is the only *decent* solution there). If you are under Windows either thing
-   about installing a [Linux distribution](http://ubuntu.com) as a second
-   system on your PC or use a [virtualization solution](http://virtualbox.org)
-   to run a linux in parallel with your current system.
+- Make sure you have access to a decent unix machine (OS X is partially ok)
+  with a decent terminal ([iTerm](http://iterm.sourceforge.net/) under OS X
+  is the only *decent* solution there). If you are under Windows either thing
+  about installing a [Linux distribution](http://ubuntu.com) as a second
+  system on your PC or use a [virtualization solution](http://virtualbox.org)
+  to run a linux in parallel with your current system.
 
-2. Load the course material from github using [git](http://git-scm.com/).
+- Load the course material from github using [git](http://git-scm.com/).
 
         git clone git://github.com/dh83/pi.git
-
-   If this should fail you have to blame most probably the university's proxy.
-   In order to make this work properly you have to manually set the proxy in
-   the current shell:
+  If this should fail you have to blame most probably the university's proxy.
+  In order to make this work properly you have to manually set the proxy in
+  the current shell:
 
         export http_proxy=http://proxy.unibe.ch:80/
 
-3. This will create a folder name `pi`, type the following into your current
-   shell to change (`cd`) into the freshly loaded folder (`pi.git`) and list 
-   its contents with the command `ls`:
+- This will create a folder name `pi`, type the following into your current
+  shell to change (`cd`) into the freshly loaded folder (`pi.git`) and list 
+  its contents with the command `ls`:
 
         ls
         cd pi.git
         ls
 
-4. Now start by reading the first file in this directory. In order to read a
-   text file we use the command `less`. And note that you do not have to type
-   the full name of the file (here '00\ terminal\ introduction.txt'), it is
-   simply enough to type '00' and the the tab key. You will get a list or a
-   single file/folder name whose name starts with the letters you typed
-   previously:
+- Now start by reading the first file in this directory. In order to read a
+  text file we use the command `less`. And note that you do not have to type
+  the full name of the file (here 'FAQ.txt'), it is
+  simply enough to type 'F' and the the tab key. You will get a list or a
+  single file/folder name whose name starts with the letters you typed
+  previously:
 
-        less 00_terminal_introduction.txt 
+        less FAQ.txt 
 
-5. Follow the instructions given in the file, if something is unclear use the
-   manpages (for instance `man less` to get help about the `less` command),
-   use the internet or ask the mentors.
+- You can start by learning about `vim` a potent command line text editor. You
+  will use `vim` constantly during this course for editing or reading text
+  files. To start change into the vim director, remember to use
+  tab-completion:
+
+        cd 01_vim_introduction
+        less README.md
+
+- If something is unclear use the manpages (for instance `man less` to get
+  help about the `less` command), use the internet or ask the mentors.
    
+
+
 Copyrights
 ----------
 

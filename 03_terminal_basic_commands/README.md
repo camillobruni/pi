@@ -31,3 +31,24 @@ typical unix command. Another way to get that is running something like this:
 By adding "--help" you tell the command to print its own help. Usually this
 will display a list with all the command's options. By using "man" you get
 a more complete descriptions of the command and its options.
+- Man
+- Cd
+- Ls
+- Pwd
+- Mkdir
+- Touch
+- Mv
+- Cp
+- Rm
+- Cat
+- Ssh
+- Version control system
+- Grep
+- Less
+- Sort
+- Wc
+- Du
+- Find
+- Wget
+- Good to now
+- Dme.md

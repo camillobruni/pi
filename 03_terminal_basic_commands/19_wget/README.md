@@ -1,0 +1,1 @@
+- Download the unibe.ch mainpage with wget

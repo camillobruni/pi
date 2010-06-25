@@ -84,5 +84,3 @@ Under the following conditions:
 * Any of the above conditions can be waived if you get permission from the 
   copyright holder.
 * Nothing in this license impairs or restricts the author's moral rights.
-
-

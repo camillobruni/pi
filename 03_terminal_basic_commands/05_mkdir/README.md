@@ -1,0 +1,2 @@
+- Create a new directory named dir
+- Create a directory with the name of this files contents

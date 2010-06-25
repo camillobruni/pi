@@ -22,5 +22,3 @@ A second generation versioning system which is easier to use than git, but
 much less stable. 
 The exercises for this versioning system are optional, once you learned git,
 you never want to change anymore.
-
-

@@ -9,12 +9,20 @@ can directly trigger terminal commands. So remember, whenever you want to have
 a look at a file either use `less` or `vim` or `cat -v` which displays all
 characters without triggering someting.
 
-- Cat the first file showing the line numbers
+- `cat` the `blink` file without arguments then use `vim` or `less` to look
+  at the same file. Any difference?
 
-- Cat the first file showing the line numbers even on empty lines
+- Again `cat` the `blink` file using the `-v` switch:
 
-- Just run cat with no argument and see what happens
+        cat -v blink
+  Now all the evil characters are *escaped* and do no harm.
 
-- Create two files a and b with a small text, then run cat a b, what happens?
 
-- Just run cat with no argument and see what happens
+- `cat` this `README.md` file showing the line numbers
+
+- `cat` this `README.md` file showing the line numbers even on empty lines
+
+- Just run `cat` directly without any argument. Can you imagine what happens
+  by using the man page or the internet?
+
+- Create two files `a` and `b` with a small text, then run `cat a b`, what happens?

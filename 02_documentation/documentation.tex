@@ -4,8 +4,20 @@
 %                   http://tobi.oetiker.ch/lshort/lshort.pdf
 %=============================================================================
 
-% this is comment line
-% the first line specifies the type of the document
+% Lines starting with a percent sign are comments, and thus ignored and not
+% shown in the final output. 
+
+% Although you can write normal text in Latex, special commands allow
+% formatting or say where a new section start. Such commands start with a
+% backslash (\). For instance to render text bold, we simply write \bf{foo},
+% now 'foo' is going to shown in bold style.
+
+% The rest of this document is stuffed with explanations and examples. Try to
+% copy existing code whenever possible and compile the document as often as
+% possible. Latex is horrible at giving you clues about the errors you made.
+
+%=============================================================================
+% This line specifies the type of the document
 \documentclass[10pt,a4paper]{scrartcl}
 % possbile options are the fontsize (here "10pt")
 %   the paper size (here "a4paper")
@@ -19,69 +31,68 @@
 %   letter / scrlttr2
 
 %=============================================================================
-% now in this section follow the different packages
-% each package contains a certain set of features like special formatting
-% language settings ot for instance, tables.
+% In this section follows the inclusion of different additional packages.
+% Each package contains a certain set of additional features like special
+% formatting language settings or for instance, tables.
 
-% make sure the input is handled correctly
+% Make sure the input is handled correctly
 \usepackage[utf8]{inputenc}
 
-% this packages enables fancy text formatting / underlining ...
+% This packages enables fancy text formatting / underlining ...
 \usepackage[normalem]{ulem}
 
 % Latex math support
 % ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf
 \usepackage{amsmath}
-% add special math symbols
+% Add special math symbols
 \usepackage{amssymb}
 
-% enable citations of scientific documents
+% Enable citations of scientific documents
 \usepackage{cite}
 
-% enable \includegraphics for easy insertion of graphics into a latex doc
+% Enable \includegraphics for easy insertion of graphics into a latex doc
 \usepackage{graphicx}
 
-% enable adding several figures in a row (not used in this doc, yet)
+% Enable adding several figures in a row (not used in this doc, yet)
 \usepackage{subfigure}
 
-% add support for \xspace a small space
+% Add support for \xspace a small space
 \usepackage{xspace}
 
 %----------------------------------------------------------------------------
-% this section sets the properties for listings. Listings are used to display
-% verbatim (unformatted) text like source code or terminal sessions.
-% Source code formatting can be set in detail:
+% This section sets the properties for listings. Listings are used to display
+% verbatim (unformatted and with a fixed width font style) text like source
+% code or terminal sessions.  Source code formatting can be set in detail:
 \usepackage{listings}
-	% global settings for source code listing pacakage
+	% Global / primary settings for source code listing package
 \lstset{
     basicstyle=\ttfamily,
     showspaces=false,
     showstringspaces=false,
     captionpos=b, 
     columns=fullflexible}
-% define the listing shortcuts for terminal code (bash)
-%----------------------------------------------------------------------------
 
+% Define the listing shortcuts for terminal code (bash)
 \lstnewenvironment{terminalcode}[1][]{\lstset{language=bash,#1}}{} 
 
 %----------------------------------------------------------------------------
 
-% the hyperref packages enables links in the outputed pdf
-% enabled links in pdf, but paint them normal in black
+% The hyperref packages enables links in the outputed pdf enabled links in
+% pdf, but paint them normal in black
 \usepackage[pdftex=true, colorlinks=true, urlcolor=black, 
 			linkcolor=black,pagecolor=black,citecolor=black,
 			bookmarks=true]{hyperref}
 
 %=============================================================================
 
-% this sections sets the properties for the title of the document
-\date{HS 2009 University Bern}
+% Here the properties for the title of the document are set
+\date{HS 2010 University Bern}
 \author{PUT YOUR NAME HERE}
 \title{Programming Introduction}
 
 %=============================================================================
-% past this line the real content of the file starts and ends with 
-% \end{document} at the very end of this file
+% Past this line the real content of the file starts with \begin{document} and
+% ends with \end{document} at the very end of this file
 \begin{document}
 
 % put the title page here
@@ -199,12 +210,14 @@ emptyfile.txt
 In this section we explain some \LaTeX\xspace details and different formatting
 commands.
 
-Whenever you need to lookup a certain symbol for \LaTeX\xspace we suggest you to use
-the online recognition tool \texttt{detexify} at \url{http://detexify.kirelabs.org/}.
+Whenever you need to lookup a certain symbol for \LaTeX\xspace we suggest you
+to use the online recognition tool \texttt{detexify} at
+\url{http://detexify.kirelabs.org/}.
 
 
 %=============================================================================
 \subsection{Common Commands}
+% ----------------------------------------------------------------------------
 \subsubsection{Sectioning}
 Depening on the documentclass given in the very beginning of this file there
 exist several sectioning levels:
@@ -221,27 +234,28 @@ exist several sectioning levels:
 \noindent To enforce \LaTeX to use a newline add a double slash \verb$\\$ at 
 the end of a line.
 
-\subsubsection{Schriftgrösse / -style}
+% ----------------------------------------------------------------------------
+\subsubsection{Font size and style}
 % here we begin a new table having three columns "{lll}". Each "l" represents
 % a column being left aligned. Other possible values would be "c" (centered)
 % or "r" (right aligned):
 \begin{tabular}{lll}
 %                   each column is separated with an ampersand "&"
-\verb$\rm$			& {\rm A normaler text}\\ 
+\verb$\rm$			& \rm{A normal text}\\ 
 %                                         each new row is ended with "\\"
-\verb$\sl$ 			& {\sl An italic text}\\
+\verb$\sl$ 			& \sl{An italic text}\\
 % \verb$$ does the same as \texttt{} but also allows commands to be displayed
 % in verbatim
-\verb$\bf$ 			& {\bf A bold text}\\
-\verb$\tiny$ 		& {\tiny A tiny ext}\\
-\verb$\scriptsize$ 	& {\scriptsize A very, very small text}\\
-\verb$\footnotesize$& {\footnotesize A very small text}\\
-\verb$\small$ 		& {\small A small text}\\
-\verb$\large$ 		& {\large A big text}\\
-\verb$\Large$ 		& {\Large A bigger text}\\
-\verb$\LARGE$ 		& {\LARGE An even bigger text}\\
-\verb$\huge$ 	    & {\huge A huge text}\\
-\verb$\Huge$ 	    & {\Huge An enormous huge text}\\
+\verb$\bf$ 			& \bf{A bold text}\\
+\verb$\tiny$ 		& \tiny{A tiny ext}\\
+\verb$\scriptsize$ 	& \scriptsize{A very, very small text}\\
+\verb$\footnotesize$& \footnotesize{A very small text}\\
+\verb$\small$ 		& \small{A small text}\\
+\verb$\large$ 		& \large{A big text}\\
+\verb$\Large$ 		& \Large{A bigger text}\\
+\verb$\LARGE$ 		& \LARGE{An even bigger text}\\
+\verb$\huge$ 	    & \huge{A huge text}\\
+\verb$\Huge$ 	    & \Huge{An enormous huge text}\\
 \verb$\emph$ 	    & \emph{An emphasized text} \\
 \verb$\underline$ 	& \underline{An underlined text} \uline{and here using the ulem-package}\\
 \verb$\texttt$ 		& \texttt{function goto(int a) { ... } }\\
@@ -251,17 +265,20 @@ the end of a line.
 \verb$\xout$ 	    & \xout{A deleted text using the ulem-package}\\
 \end{tabular}
 
+% ----------------------------------------------------------------------------
 \subsubsection{Notes}
-To create a footnote use the \verb$\footnote{YOUR NOTE}$ 
-command\footnote{\dots as you can see here.}. \\
-If you want to put a remark at side of a page use \verb$\marginpar$.
-\marginpar{This is a note at the border of the page.}
+To create a footnote use the \verb$\footnote{YOUR NOTE}$
+command\footnote{\dots as you can see here.}. \\ If you want to put a remark
+at side of a page use \verb$\marginpar$.  \marginpar{This is a note at the
+border of the page.}
 
+% ----------------------------------------------------------------------------
 \subsubsection{Lists}
-There exist several list types in \LaTeX. You start a list by adding a 
+There exist several list types in \LaTeX. You start a list by adding a
 \verb$\being{LISTTYPE}$ and end it with an \verb$\end{LISTTYPE}$. A list item
 is added with a \verb$\item$ between the \texttt{begin} and \texttt{end}.
 \texttt{LISTTYPE} can be one of the following list:
+
 \begin{itemize}
 \item \texttt{enumerate}
 \item \texttt{itemize}
@@ -284,6 +301,7 @@ is added with a \verb$\item$ between the \texttt{begin} and \texttt{end}.
 \end{enumerate}
 
 
+% ----------------------------------------------------------------------------
 \subsubsection{Math, \LaTeX 's real strengths}
 A much longer introduction, although still called a short math guide, is 
 avaiable online at \url{ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf}.

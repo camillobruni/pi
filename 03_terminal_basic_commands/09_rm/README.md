@@ -1,7 +1,7 @@
-- Create a file named a
+- Create an empty file named `a`
 
-- Delete a
+- Delete `a`
 
-- Delete source recursively
+- Delete the folder `source` recursively with a single command
 
-- Create two files and remove both with one command
+- Create two files (`a`, `b`) and remove both in one command

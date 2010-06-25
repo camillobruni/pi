@@ -1,3 +1,3 @@
-- Create a new file name bla
+- Create a new file name `bla` using `touch`.
 
-- Change the access and modification time bla to yesterday
+- Change the access and modification time of `bla` to yesterday

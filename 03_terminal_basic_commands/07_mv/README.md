@@ -1,9 +1,9 @@
-- Create two directories a and b
+- Create two directories named `a` and `b`
 
-- Move a into b
+- Move `a` into `b`
 
-- Move it back
+- Move `a` back
 
-- Rename a to ei
+- Rename `a` to `c`
 
-- Try to rename ei to b and directly overwrite it
+- Rename `c` to `b` and directly overwrite it

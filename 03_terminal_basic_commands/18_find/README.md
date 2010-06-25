@@ -1,1 +1,1 @@
-- List all files in the parent directory containing and 
+- List all files in the parent directory containing `and`

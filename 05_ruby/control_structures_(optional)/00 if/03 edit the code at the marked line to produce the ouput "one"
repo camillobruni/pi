@@ -1,7 +1,0 @@
-# change the following line
-a = false
-if a
-	puts "one"
-else
-	puts "two"
-end

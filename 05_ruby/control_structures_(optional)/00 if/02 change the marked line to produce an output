@@ -1,5 +1,0 @@
-# change the following line
-a = false
-if a
-	puts "Hallo"
-end

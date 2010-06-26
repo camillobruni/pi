@@ -29,13 +29,13 @@
 After this little introduction you should get a feeling of what `if` does. To
 describe it properly lets name some place in the above example:
 
-    if ${CONDITION}
-        ${TRUE_CHOICE}
-    else
-        ${FALSE_CHOICE}
-    end
+        if ${CONDITION}
+            ${TRUE_CHOICE}
+        else
+            ${FALSE_CHOICE}
+        end
 
 Now `${CONDITION}` can be any ruby code returning `true` or `false`. These two
-values are so called [Booleans](http://en.wikipedia.org/wiki/Boolean). If 
-`${CONDITION}` is `true` then code in the `${TRUE_CHOICE}` is run, otherwise
+values are [Booleans](http://en.wikipedia.org/wiki/Boolean_algebra_(logic)).
+If `${CONDITION}` is `true` then code in the `${TRUE_CHOICE}` is run, otherwise
 the code in the `${FALSE_CHOICE}`.

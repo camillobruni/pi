@@ -1,46 +1,49 @@
-- Open "irb" in you terminal and use it for this lesson
+- Open `irb` in you terminal and use it for this lesson
 
-- Create the string "the quick brown fox jumps over the lazy dog"
+- Create the string `"the quick brown fox jumps over the lazy dog"`
 
-- Put %w{ in front and } in the back. what do you have now?
+- Put `%w{` in front and `}` in the back. What do you have now?
 
-- Assign it to a variable named "a" by using "a="
+- Assign it to a variable named `a` by using `a=`
 
-- Display the contents of "a" by using puts
+- Display the contents of `a` by using puts
 
-- Display the size of "a"
+- Display the size of `a`
 
-- Sort "a"
+- Sort `a`
 
-- Figure out what "a.collect { |word| word.size }" does
+- Figure out what `a.collect { |word| word.size }` does
 
-- Now the same but use sort by instead of collect
+- Now the same but use `sort_by` instead of `collect`
 
-- Check the documentation for "array#reject" and compare it with "array#collect"
+- Check the documentation for `array#reject` and compare it with
+  `array#collect`
 
-- Use reject to create filter out all the elements which are longer than 3 characters
+- Use `reject` to filter out all elements having more than 3 characters
 
-- Display all elements from "a" in uppercase using collect
+- Display all elements from `a` in uppercase using `collect`
 
-- The same but in lowercase (the method is called downcase)
+- The same but in lowercase (the transformation method is called `downcase`)
 
-- Read the doc for "array#join"
+- Read the doc for `array#join`
 
-- Use join with our "a"
+- Use join with our `a`
 
-- Display "a" in reversed order
+- Display `a` in reversed order
 
-- Cat this file and run that in irb
+- Run the following in `irb`:
+    
+        puts "The list #{a} contains #{a.size} words"
 
-- Now use join instead of the pure "a" to display it nicely
+- Now use join instead of the pure `a` to display it nicely
 
-- Display the first and the last element of "a"
+- Display the first and the last element of `a`
 
-- Read the array's "each" documentation
+- Read the array's `each` documentation
 
-- Use puts in the each block to print each word of "a"
+- Use `puts` in the each block to print each word of `a`
 
-- Multiply "a"
+- Multiply `a` with 2
 
-- Add two a's together
+- Add two `a`s together
 

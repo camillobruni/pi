@@ -58,11 +58,12 @@ All the course material is available on [github](http://github.com/dh83/pi).
    
 
 
-Copyrights
+Copyrights 
 ----------
 
 The course material is licensed under [Creative Commons Attribution ShareAlike
 3.0](http://creativecommons.org/licenses/by-sa/3.0/).
+![Creative Commons Attribution ShareAlike 3.0](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)
 
 You are free:
 

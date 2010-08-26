@@ -193,8 +193,8 @@
    
 - How do I connect to the #unibe-info channel on irc.freenode.org?
     1. Get a decent IRC client:
-        On Windows and Linux: http://www.pidgin.im/
-        On Mac: http://adium.im/beta/ 
+        - On Windows and Linux: <http://www.pidgin.im/>
+        - On Mac: <http://adium.im/beta/>
     2. Connect to irc.freenode.org on port 7000 using SSL
     3. Join the Channel by typing
 

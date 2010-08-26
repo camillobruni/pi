@@ -198,4 +198,5 @@
     2. Connect to irc.freenode.org on port 7000 using SSL
     3. Join the Channel by typing
 
-        /JOIN #unibe-info
+            /JOIN #unibe-info
+

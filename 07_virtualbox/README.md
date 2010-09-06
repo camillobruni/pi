@@ -53,8 +53,8 @@ images from [virtualboxes.org](http://virtualboxes.org/images/). You can also
 run a Windows in VirtualBox -- very useful if you have a mac or a linux 
 machine.
 
-You can download Windows image legally through the MSDNAA service from 
-microsoft: http://msdn40.e-academy.com/unibe_gesamter. You will find
+You can download Windows image legally through the [MSDNAA service from 
+microsoft](http://msdn40.e-academy.com/unibe_gesamter). You will find
 more information on how to install a system from scratch on the 
 [VirtualBox Documentation](http://www.virtualbox.org/manual/ch02.html).
 

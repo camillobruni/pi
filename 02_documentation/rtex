@@ -443,13 +443,13 @@ class TexOutputFormatter
             lineNumberPattern = /lines ([0-9\-]+)/
             @parsed           = true
             mergedLine        = ""
-            lines             = @texOutput.each.entries
+            lines             = @texOutput.split("\n")
             lines.each_with_index { |line,index|
                 #magic to unwrap the autowrapped lines from latex.. silly
                 mergedLine += line.chomp
                 if line.size == 80
                     next
-                elsif line.chomp.start_with? "! Undefined"
+                elsif line.chomp.match("^\!\ Undefined")
                     next
                 end
                 # start of the actual error parsing

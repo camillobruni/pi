@@ -2,11 +2,11 @@
 
 - How do you quit `irb`?
 
-- Use `ri` to get information about string
+- Use `ri` to get information about the class String
 
-- Use `ri` to get information about strip in string
+- Use `ri` to get information about the method strip in the class String
 
-- Try to figure out what the method to s does
+- Try to figure out what the method to_s does
 
 - When do you use the command `ruby`
 

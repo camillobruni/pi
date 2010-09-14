@@ -681,7 +681,7 @@ class TexError < TexWarning
             return $1
         end
         (index+1).upto(lines.size-1) { |i|
-            return "-" if lines[i].start_with? "!"
+            return "-" if lines[i].match("^!")
             if lines[i] =~ match
                 return $1
             end

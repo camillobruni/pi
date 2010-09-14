@@ -2,7 +2,7 @@
 
 - Cd to the parent dir and check it there
 
-- Cd to 03 ls, a symbolic link, and check again
+- Cd to the folder '03_ls_symlink', a symbolic link, and check again
 
 - ls
 

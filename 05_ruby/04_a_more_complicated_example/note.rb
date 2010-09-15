@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # Script by Adrian Kuhn
 
 $fname = 'notes.txt'
@@ -11,10 +12,16 @@ if $*.last =~ /\?\?$/
   else 
     puts "Nothing known about \"#{query}\" :("  
   end
+elsif $*.first == '--help'
+  puts "usage "
+  puts "    #{__FILE__} --edit    # edit the notes source file"
+  puts "    #{__FILE__} --hack    # edit this script"
+  puts "    #{__FILE__} $NOTE     # add a note"
+  puts "    #{__FILE__} $REGEXP?? # search a note using $REGEXP"
 elsif $*.first == '--edit'
   `#{$editor} #{$fname}`
 elsif $*.first == '--hack'
-  `#{$editor} \"#{__FILE__}\"`
+  `#{$editor} "#{__FILE__}"`
 elsif not $*.empty? and not $*.first =~ /^-/ then
   File.open($fname, 'a') do |file| 
     file.puts "#{Time.now.strftime("%Y/%m/%d\t%H:%M:%S")}\t#{$*.join(' ').gsub(/\n/,' ')}"

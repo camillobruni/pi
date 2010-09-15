@@ -4,6 +4,6 @@
 
 - Cd to the folder '03_ls_symlink', a symbolic link, and check again
 
-- ls
+- Do an `ls`, do you know where you are?
 
-- What are the two options of pwd?
+- Go one dir up with `cd ..`, and check again where you are

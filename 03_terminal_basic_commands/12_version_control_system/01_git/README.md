@@ -34,6 +34,9 @@
 - Commit these changes locally
 
         git commit
+  This will open a vim instance with an empty commit message. Type in a small
+  text explaining what you just did, eg: 'added documentation'. The save and
+  quit vim with the kown `:wq` command.
 
 - Push (save on the server) the locally commited changes to the server on
   github.com

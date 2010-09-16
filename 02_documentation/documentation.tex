@@ -174,7 +174,7 @@ cami@bender:~/test$ ls
     \end{terminalcode}
 % the code block ended with the previous line
 
-% again anothe item followed by some descriptive text
+% again another item followed by some descriptive text
 \item[\texttt{touch}] updates the access and modification times of each FILE to 
     the current time.
    	\begin{terminalcode}
@@ -300,6 +300,18 @@ is added with a \verb$\item$ between the \texttt{begin} and \texttt{end}.
 \item Lc4 d6
 \end{enumerate}
 
+
+\begin{description}
+    \item[apple] a nice fruit
+    % if you want to put the content of a description on a new line you have 
+    % to apply some latex magic cause
+    %   \item[cherry]\\
+    % won't work directly. You first add an \hfill which will fill the line 
+    % to the right end and then you can add a newline. \hifll will work by
+    % itself as well if you just want to put text on the right side.
+    \item[cherry] \hfill \\
+        also a nice fruit
+\end{description}
 
 % ----------------------------------------------------------------------------
 \subsubsection{Math, \LaTeX 's real strengths}

@@ -19,13 +19,13 @@ elsif $*.first == '--help'
   puts "    #{__FILE__} $NOTE     # add a note"
   puts "    #{__FILE__} $REGEXP?? # search a note using $REGEXP"
 elsif $*.first == '--edit'
-  `#{$editor} #{$fname}`
+  exec("#{$editor} #{$fname}")
 elsif $*.first == '--hack'
-  `#{$editor} "#{__FILE__}"`
+  exec("#{$editor} '#{__FILE__}'")
 elsif not $*.empty? and not $*.first =~ /^-/ then
   File.open($fname, 'a') do |file| 
     file.puts "#{Time.now.strftime("%Y/%m/%d\t%H:%M:%S")}\t#{$*.join(' ').gsub(/\n/,' ')}"
   end
-else  
+else 
   puts `tail #{$fname}`
 end

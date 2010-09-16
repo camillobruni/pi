@@ -3,13 +3,28 @@
 - Make sure you create a public ssh key (mentioned in the ssh examples)
 
 - Upload your PUBLIC ssh key (generally `~/.ssh/id_rsa.pub`) to github
-    Account Settings > Account Overview > SSH Public Keys
+        
+        Account Settings > Account Overview > SSH Public Keys
+  It is important that you copy the public-key as a one-line text otherwise the 
+  following exercises won't work. This we use a GUI editor, a safe solution for
+  now :).
+        
+        gvim ~/.ssh/id_rsa.pub
+  Then select all text and right-click copy it. Go to the github site and add a
+  new key by pasting the text in there. To return properly in your terminal press
+  `ctrl-c` to kill the text editor `gvim`. Note: On Mac OS X you most probably 
+  don't have `gvim` installed in this case run the following line which will
+  copy the public-key directly into your clipboard:
 
-- Create a new repository name 'pi' and follow the instruction to upload/clone
-  it
+        pbcopy < ~/.ssh/id_rsa.pub
+     
+
+- Create a new repository named 'my-pi' and follow the instruction to
+  upload/clone it. Make sure to create the bare repository outside the existing
+  `pi` exercises file.  Something like `~/Documents/my-pi` should be perfect.
 
 - Add the files of your latex documentation to this repository
-    (either `mv` or `cp`)
+  (either `mv` or `cp`)
 
 - Tell git to keep track of the changes for these files
 

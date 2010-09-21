@@ -46,7 +46,8 @@
 - Find the newly added files on the github website
 
 - In order to make pushing the changes easier edit the file `.git/config` and
-  make sure it contains the following lines:
+  make sure it contains the following lines (depending on the previous
+  steps you might might find part of it already writtien in the config file):
 
         [remote "origin"]
             url = git@github.com:$USERNAME/pi.git

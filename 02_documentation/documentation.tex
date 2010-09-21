@@ -1,7 +1,8 @@
 %=============================================================================
 % This document shows the basic of LaTeX. If you want to learn more we suggest
-% reading the not so short latex introduction:
+% reading the not so short latex introduction 
 %                   http://tobi.oetiker.ch/lshort/lshort.pdf
+% after reading and understanding the examples listed in here.
 %=============================================================================
 
 % Lines starting with a percent sign are comments, and thus ignored and not
@@ -9,8 +10,8 @@
 
 % Although you can write normal text in Latex, special commands allow
 % formatting or say where a new section start. Such commands start with a
-% backslash (\). For instance to render text bold, we simply write \bf{foo},
-% now 'foo' is going to shown in bold style.
+% backslash (\). For instance to render text bold, we simply write
+% \textbf{foo}, now 'foo' is going to shown in bold style.
 
 % The rest of this document is stuffed with explanations and examples. Try to
 % copy existing code whenever possible and compile the document as often as
@@ -19,9 +20,15 @@
 %=============================================================================
 % This line specifies the type of the document
 \documentclass[10pt,a4paper]{scrartcl}
-% possbile options are the fontsize (here "10pt")
-%   the paper size (here "a4paper")
-%   the pagetype (not present: "twopage" or "oneside")
+% possible options are 
+%   - the fontsize (here "10pt")
+%   - the paper size (here "a4paper")
+%   - the pagetype (not present): 
+%        - "twopage" different side margins for even and odd pages
+%        - "oneside" same side margins for even and odd pages
+%   - the number of columns (not present):
+%       - twocolumn enables a twocolumn page layout
+%       - onecolumn (generally the default) just uses one column
 
 % there exist various kind of documentclasses
 %   article / scrticle
@@ -75,6 +82,10 @@
 % Define the listing shortcuts for terminal code (bash)
 \lstnewenvironment{terminalcode}[1][]{\lstset{language=bash,#1}}{} 
 
+% you can define more code listing environments for other languages. For the 
+% full documentation go to:
+% ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf
+
 %----------------------------------------------------------------------------
 
 % The hyperref packages enables links in the outputed pdf enabled links in
@@ -101,7 +112,7 @@
 % put the table of contents here
 \tableofcontents
 
-% add a new page
+% add a new page, this is optional
 \newpage
 
 %=============================================================================
@@ -150,7 +161,7 @@
 \subsection{Commands}
 % add a description list. A description list is again an certain special
 % block (called environment in latex terms) formatting the enclosed text
-% The ouput will look something like this:
+% The output will look something like this:
 %   item_name text text text text
 %             text text text text
 %   item_name text text text text
@@ -159,10 +170,10 @@
 %
 \begin{description}
 
-% Here we add a new item to the descrption list
+% Here we add a new item to the description list
 % Each item is added with a special command \item[ITEM_NAME] where ITEM_NAME
 % is text you add.
-% In this example ITEM_NAME is "\texttt{rm}". \texttt is a formatting commondd
+% In this example ITEM_NAME is "\texttt{rm}". \texttt is a formatting command
 % displaying the parenthesized text in verbatim and a fixed sized font
 \item[\texttt{rm}] removes a file or a directory
 % now we add a code section into the item
@@ -202,11 +213,12 @@ emptyfile.txt
 
 %=============================================================================
 % starting a new section
-\section{Documentation with Latex}
+\section{\LaTeX}
 %=============================================================================
 \subsection{Introduction} 
 
-% \LaTeX displays the latex logo, \xpsace a tiny space
+% \LaTeX displays the latex logo, \xpsace a tiny space which vanished in front
+% of a full stop.
 In this section we explain some \LaTeX\xspace details and different formatting
 commands.
 
@@ -238,15 +250,18 @@ the end of a line.
 \subsubsection{Font size and style}
 % here we begin a new table having three columns "{lll}". Each "l" represents
 % a column being left aligned. Other possible values would be "c" (centered)
-% or "r" (right aligned):
+% or "r" (right aligned). A vertical bar "|" stands for a vertical line in the
+% outputted table:
 \begin{tabular}{lll}
 %                   each column is separated with an ampersand "&"
-\verb$\rm$			& \rm{A normal text}\\ 
-%                                         each new row is ended with "\\"
-\verb$\sl$ 			& \sl{An italic text}\\
+\verb$\textrm$		& \textrm{A normal text}\\ 
+%                                     each new row is ended with "\\"
+\verb$\textsl$ 		& \textsl{An italic text}\\
+\verb$\texttt$ 		& \texttt{An monospace text}\\
 % \verb$$ does the same as \texttt{} but also allows commands to be displayed
-% in verbatim
-\verb$\bf$ 			& \bf{A bold text}\\
+% in verbatim. The exclamation mark can be replaced with any other character.
+\verb$\verb!!$ 		& \verb!An monospace text!
+\verb$\textbf$ 		& \textbf{A bold text}\\
 \verb$\tiny$ 		& \tiny{A tiny ext}\\
 \verb$\scriptsize$ 	& \scriptsize{A very, very small text}\\
 \verb$\footnotesize$& \footnotesize{A very small text}\\
@@ -257,7 +272,8 @@ the end of a line.
 \verb$\huge$ 	    & \huge{A huge text}\\
 \verb$\Huge$ 	    & \Huge{An enormous huge text}\\
 \verb$\emph$ 	    & \emph{An emphasized text} \\
-\verb$\underline$ 	& \underline{An underlined text} \uline{and here using the ulem-package}\\
+\verb$\underline$ 	& \underline{An underlined text} 
+                      \uline{and here using the ulem-package}\\
 \verb$\texttt$ 		& \texttt{function goto(int a) { ... } }\\
 \verb$\uuline$ 		& \uuline{A double unterstrichener text using the ulem-package} \\
 \verb$\uwave$ 		& \uwave{A wavy unterstrichener text using the ulem-package} \\
@@ -293,7 +309,7 @@ is added with a \verb$\item$ between the \texttt{begin} and \texttt{end}.
 % add a list into the item named "e4"
 	\begin{enumerate}
 % add items to the nested list
-	\item{e4}   e5
+	\item{e4} e5
 	\item Lc4 d6
 % end the nested list
 	\end{enumerate}
@@ -315,8 +331,9 @@ is added with a \verb$\item$ between the \texttt{begin} and \texttt{end}.
 
 % ----------------------------------------------------------------------------
 \subsubsection{Math, \LaTeX 's real strengths}
-A much longer introduction, although still called a short math guide, is 
-avaiable online at \url{ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf}.
+A much longer introduction, although still called a short math guide, is
+available online at
+\url{ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf}.
 
 \begin{description}
 
@@ -358,8 +375,9 @@ Big spaces          & \verb$\qquad$ & $ y=x^{2} \qquad y'=2x \qquad  y''=2 $
     \frac{\frac{\frac{a}{b}}{c}}{d} \qquad
     \frac {{n+1 \choose k/2}} {5!} \]
 
-\noindent In the simple math environment two FORMULAdifferent sized fractions can be 
-used; the small fractions $\frac{1}{2}$ or the normal sized $\dfrac{1}{x}$.
+\noindent In the simple math environment two different sized fractions
+can be used; the small fractions $\frac{1}{2}$ or the normal sized
+$\dfrac{1}{x}$.
 
 \item[Roots]	
 \[  \sqrt[\text{root depth}]{\text{root term}} \qquad
@@ -367,21 +385,28 @@ used; the small fractions $\frac{1}{2}$ or the normal sized $\dfrac{1}{x}$.
 		
 \item[Functions]
 \[ f : \mathbb{N} \to \mathbb{R} \qquad f : x \mapsto x^2\]
-Mathematical functions are writtein explicitely written in normal text not
-math mode text:
+Mathematical functions are  explicitly written in normal text not
+math mode text to distinguish them from ordinary variables:
 \[ \sin(x) = \text{sin}(x) \text{ {\bf and not }} sin(x)\]
 
 \item[Varia]
 \[ \left( \sqrt{\frac{A^C}{B_y}} +	 \sum_{i=1}^N a_i\right) \]
 \[ A \stackrel {\lambda_a} {\longrightarrow} B \]
-\[ \int \! \! \int z\,dx \, dy \quad \mbox {\bf not} \quad \int\int z dx dy \]
-\[ \int \! \! \int z\,dx \, dy \quad \mbox {\bf not} \quad \int\int z dx dy \]
+\[ \iint z\,dx \, dy \quad \mbox {\bf not} \quad \int\int z dx dy \]
 				
 {\Large
 \[ \Leftarrow \  \Leftrightarrow \  \Longleftrightarrow \  \Rightarrow \_ 
     \Uparrow \  \Updownarrow \  \Downarrow	\]}
 				
-\[\bigcap \cap \sum \int_0^{2\pi} \vec{a} \dot{a} \ddot{a} a^{\prime \prime} \]
+\[\bigcap \cap \sum \Pi \int_0^{2\pi} \]
+
+\item[Accents]
+\[  \vec{a} \qquad
+    \bar{a} \qquad
+    \hat{a} \qquad
+    \dot{a} \qquad
+    \ddot{a} \qquad
+    a^{\prime \prime} \]
 
 
 \item[Matrices]
@@ -400,5 +425,8 @@ math mode text:
 \section{Ruby Programming}
 %=============================================================================
 
+% add your own documentation here
 
+
+%=============================================================================
 \end{document}

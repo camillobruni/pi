@@ -17,11 +17,12 @@
         
         </Applications/Utilities/Terminal.app>
         otherwise use Spotlight to search for it. Although we strongly
-        recommend using [iTerm](http://iterm.sourceforge.net/) which has more
-        options but is slightly slower.
+        recommend using [iTerm2](http://code.google.com/p/iterm2/) which has more
+        options but can be slightly slower.
 
     - On Windoze:
-        Try installing linux first, although another option might be to
+        Try installing linux first or use virtualbox (see the corresponding
+        section in the tutorial) although another option might be to
         install [cygwin](http://cygwin.com) and launch that terminal.
         
 - Why should I use several tabs while working with the command line?
@@ -41,7 +42,7 @@
     Just type the command, for instance `whoami` and then hit enter.
 
 - Why is there Text written in uppercase and with a dollar sign in front of
-   it?
+  it?
 
     Uppercase text, for example $COMMAND_NAME should be replaced by something 
     you write yourself, in this case with a valid unix command name.
@@ -139,7 +140,7 @@
     2. Don't close the windows!
     3. Secure yourself
     4. Call the assistant or write an email
-    5. Save the others
+    5. Save your friends -- and Dr. Zoydberg
    
 - I think this can be done better?
 
@@ -147,34 +148,18 @@
     Contact us at camillobruni ät students.unibe.ch or directly file an issue
     on <http://github.com/dh83/pi/issues>.
 
-- How do I start with the exercises?
 
-    First you have to fetch all the sources, including this document, from our
-    server. To do that we use subversion, in short svn. Type the following in 
-    the Terminal to download all the exercies:
-       
-       svn checkout http://bender.unibe.ch/svn/pi/lessons/
+- How do I revert changes if I broke something?
 
-- Hmm, I think subversion doesn't work with my machine.
+    Checkout the last version of the file or directory you change:
+        
+        `git checkout dir`
+        `git checkout file.txt`
 
-    Install it!
-    - On Linux (Debian, Ubuntu):
-       
-            sudo apt-get install subersion
-    
-    - On Mac:
-       
-        Install the Developer Tools or go to 
-        <http://subversion.tigris.org/getting.html#osx>
-    
-    - On Windoze:
-       
-        <http://subversion.tigris.org/getting.html#windows> or via
-        <http://www.cygwin.com/>
+- How do I update the exercises for instance If a bug was fixed by one of 
+  the assistants?
 
-- How do I update the exercises if I broke something?
-
-    Change to the "lessons" directory then do a "svn up".
+    Change to the `pi` directory then do a "git pull".
 
 - What do I do next?
 
